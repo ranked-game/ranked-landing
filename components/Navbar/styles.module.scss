@@ -1,2 +1,40 @@
+@import '../../theme/styles/palette.scss';
 .container {
+	display: grid;
+	grid-template-columns: 189px 415px auto;
+	grid-gap: 111px;
+	z-index: 1;
+	position: relative;
+	padding-left: 270px;
+	padding-right: 270px;
+
+	& .logo {
+		padding-top: 38px;
+		// padding-left: 270px;
+	}
+	& .btnUrl {
+		font-size: 17px;
+		line-height: 20px;
+		text-align: center;
+		height: 100%;
+		color: #ffffff;
+		background-color: Transparent;
+		padding: 10px;
+		overflow: hidden;
+	}
+	& .btnDwnl {
+		background-color: $buttonOrange;
+		width: 143px;
+		height: 50px;
+		margin-left: 30px;
+	}
+	& .containerBtnUrl {
+		padding-top: 30px;
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
+	& .containerBtnDwnl {
+		padding-top: 30px;
+		text-align: end;
+	}
 }
