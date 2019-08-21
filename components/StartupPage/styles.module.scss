@@ -1,2 +1,32 @@
+// @import '../../theme/svg/startupPage.svg';
 .container {
+	// background-image: url('../../theme/svg/startupPage.svg');
+	background-color: wheat;
+	position: absolute;
+	// width: 2187px;
+	// height: 1049px;
+	// left: -133px;
+	// top: -20px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	// & .topLinear {
+	// 	position: absolute;
+	// 	width: 1920px;
+	// 	height: 340px;
+	// 	left: 0px;
+	// 	top: 0px;
+	// 	background: linear-gradient(180deg, #10053f 0%, rgba(16, 5, 63, 0) 100%);
+	// 	mix-blend-mode: normal;
+	// 	box-shadow: 0px 4px 65px rgba(69, 139, 148, 0.066);
+	// }
+	// & .bottomLinear {
+	// 	position: absolute;
+	// 	width: 1920px;
+	// 	height: 512px;
+	// 	left: 1920px;
+	// 	top: 1002px;
+	// 	background: linear-gradient(180deg, #3b2987 -0.88%, rgba(16, 5, 63, 0) 99.01%);
+	// 	transform: rotate(-180deg);
+	// }
 }
