@@ -22,4 +22,13 @@
 		background: linear-gradient(180deg, #3b2987 -0.88%, rgba(16, 5, 63, 0) 99.01%);
 		transform: rotate(-180deg);
 	}
+
+	& .infoBlock {
+	}
+	& .dashboardImg {
+		z-index: 1;
+		position: relative;
+		// position: absolute;
+		// right: 129px;
+	}
 }
