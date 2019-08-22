@@ -7,7 +7,7 @@ import StartupPage from '../components/StartupPage';
 import '../theme/styles/index.scss';
 
 const Home = () => (
-	<div>
+	<div className="container">
 		<Head title="Home" />
 		<Navbar />
 		<StartupPage />

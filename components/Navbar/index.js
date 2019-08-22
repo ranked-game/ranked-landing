@@ -1,7 +1,6 @@
 import Styles from './styles.module.scss';
-// import { BlockWithPhone } from '../BlockWithPhone';
-import Logo from '../../static/assets/images/logoGroup.png';
-// import Logo from '../../static/assets/logoGroup.svg';
+
+const Logo = '../../static/assets/svg/logoGroup.svg';
 
 const Navbar = () => (
 	<div className={Styles.container}>

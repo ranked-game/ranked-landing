@@ -1,11 +1,12 @@
 @import './palette.scss';
+
 body {
 	background-color: $backgroundColor;
 	color: $colorWhite;
-	max-width: 100%;
 	overflow-x: hidden;
+
 	margin: 0px;
-	// overflow-y: hidden;
+	overflow-y: hidden;
 }
 button {
 	border: none;
