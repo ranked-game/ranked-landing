@@ -1,11 +1,17 @@
+@import '../../theme/styles/mixins.scss';
+
 .bigText {
-	font-weight: bold;
-	font-size: 220%;
+	@include bigText;
 	position: relative;
 	padding-top: 100px;
-	text-align: center;
-	text-transform: uppercase;
 	font-family: sans-serif;
+	text-align: center;
+}
+.top {
+	width: 100%;
+	height: 80%;
+	position: absolute;
+	transform: rotate(180deg);
 }
 .container {
 	display: grid;
@@ -27,5 +33,16 @@
 		width: 40%;
 		top: -55%;
 		left: 33%;
+	}
+}
+.bottom {
+	width: 100%;
+	height: 40%;
+	position: absolute;
+	@media screen and (min-width: 1367px) {
+		top: 200%;
+	}
+	@media screen and (max-width: 1366px) {
+		top: 202%;
 	}
 }

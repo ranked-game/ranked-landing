@@ -1,0 +1,10 @@
+@import '../../theme/styles/palette.scss';
+@import '../../theme/styles/mixins.scss';
+
+.bigText {
+	text-align: center;
+	@include bigText;
+	padding-top: 20%;
+}
+.container {
+}
