@@ -1,0 +1,31 @@
+.bigText {
+	font-weight: bold;
+	font-size: 220%;
+	position: relative;
+	padding-top: 100px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
+.container {
+	display: grid;
+	padding-top: 5%;
+	grid-template-columns: 50% 50%;
+
+	& .imgMain {
+		width: 100%;
+	}
+	& .logoLol {
+		position: relative;
+		width: 70%;
+		top: -50%;
+		left: 15%;
+	}
+	& .logoDota {
+		position: relative;
+		text-align: center;
+		width: 40%;
+		top: -55%;
+		left: 33%;
+	}
+}
