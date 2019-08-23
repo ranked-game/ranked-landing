@@ -1,48 +1,58 @@
 @import '../../theme/styles/mixins.scss';
-
-.bigText {
-	@include bigText;
-	position: relative;
-	padding-top: 100px;
-	font-family: sans-serif;
-	text-align: center;
-}
-.top {
-	width: 100%;
-	height: 80%;
-	position: absolute;
-	transform: rotate(180deg);
-}
 .container {
-	display: grid;
-	padding-top: 5%;
-	grid-template-columns: 50% 50%;
-
-	& .imgMain {
-		width: 100%;
-	}
-	& .logoLol {
-		position: relative;
-		width: 70%;
-		top: -50%;
-		left: 15%;
-	}
-	& .logoDota {
-		position: relative;
+	float: left;
+	& .bigText {
+		@include bigText;
+		// position: absolute;
+		// padding-top: 100px;
+		font-family: sans-serif;
 		text-align: center;
-		width: 40%;
-		top: -55%;
-		left: 33%;
 	}
-}
-.bottom {
-	width: 100%;
-	height: 40%;
-	position: absolute;
-	@media screen and (min-width: 1367px) {
-		top: 200%;
+
+	& .top {
+		width: 100%;
+		height: 80%;
+		position: absolute;
+		transform: rotate(180deg);
 	}
-	@media screen and (max-width: 1366px) {
-		top: 202%;
+	& .table {
+		display: grid;
+		padding-top: 4%;
+		width: 100%;
+		height: 25rem;
+		grid-template-columns: 50% 50%;
+
+		& .imgMain {
+			width: 100%;
+		}
+		& .logoLol {
+			position: relative;
+			width: 70%;
+			top: -50%;
+			left: 15%;
+		}
+		& .logoDota {
+			position: relative;
+			text-align: center;
+			width: 40%;
+			top: -55%;
+			left: 33%;
+		}
+	}
+	& .bottom {
+		width: 100%;
+
+		@media screen and (min-width: 1367px) {
+			height: 19rem;
+		}
+		@media screen and (max-width: 1366px) {
+			height: 10rem;
+		}
+		// @media screen and (min-width: 1367px) {
+		// 	top: 200%;
+		// }
+		// @media screen and (max-width: 1366px) {
+		// 	top: 202%;
+		// }
 	}
 }

@@ -1,0 +1,22 @@
+@import '../../theme/styles/palette.scss';
+@import '../../theme/styles/mixins.scss';
+
+.container {
+	padding: 3% 0;
+	// position: relative;
+	& .imgFeature {
+		padding: 3% 0;
+		width: 69%;
+		height: 136px;
+		align-content: center;
+	}
+	& .textFeature {
+		font-family: sans-serif;
+		font-weight: normal;
+		font-size: 90%;
+		text-align: center;
+		position: relative;
+		line-height: 140%;
+		padding-top: 5%;
+	}
+}

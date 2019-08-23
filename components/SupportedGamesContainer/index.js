@@ -8,11 +8,11 @@ const lolMain = '/static/assets/svg/lol.svg';
 const dotaLogo = '/static/assets/svg/dotaLogo.svg';
 const lolLogo = '/static/assets/svg/lolLogo.svg';
 const SupportedGamesContainer = () => (
-	<div>
+	<div className={Styles.container}>
 		<div className={Styles.bigText}>Games that we support</div>
 		<img className={Styles.top} src={boxbottom1} alt={'bottom1'} />
 
-		<div className={Styles.container}>
+		<div className={Styles.table}>
 			<div>
 				<img className={Styles.imgMain} src={dotaMain} alt={'dotaMain'} />
 				<img className={Styles.logoDota} src={dotaLogo} alt={'dotaLogo'} />

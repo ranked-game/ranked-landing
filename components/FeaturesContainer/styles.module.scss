@@ -1,10 +1,21 @@
 @import '../../theme/styles/palette.scss';
 @import '../../theme/styles/mixins.scss';
 
-.bigText {
-	text-align: center;
-	@include bigText;
-	padding-top: 20%;
-}
 .container {
+	// float: left;
+
+	& .bigText {
+		text-align: center;
+		@include bigText;
+		padding-right: 5%;
+		// padding-top: 3%;
+		// margin-top: 25px;
+	}
+	& .table {
+		text-align: center;
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		grid-gap: 5%;
+		padding: 4% 12% 0 13%;
+	}
 }
