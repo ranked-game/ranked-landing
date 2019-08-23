@@ -6,12 +6,20 @@
 		background-image: url(/static/assets/svg/startupPage.svg);
 		background-repeat: no-repeat;
 		position: absolute;
-		width: 124%;
-		@media screen and (min-width: 1367px) {
+		@media screen and (min-width: 1437px) {
 			height: 95%;
 		}
-		@media screen and (max-width: 1366px) {
+		@media screen and (max-width: 1436px) {
 			height: 105%;
+			width: 124%;
+		}
+		// @media screen and (min-width: 1019px) {
+		// 	width: 124%;
+		// }
+		@media screen and (max-width: 1018px) {
+			width: 114%;
+			height: 84%;
+			background-size: inherit;
 		}
 		left: -9%;
 		top: -1%;
@@ -26,18 +34,51 @@
 	}
 
 	& .table {
-		display: grid;
-		grid-template-columns: 43% 25%;
-		grid-gap: 5%;
-		z-index: 1;
-		position: relative;
-		padding: 7% 11%;
+		@media screen and (min-width: 1019px) {
+			display: grid;
+			grid-template-columns: 43% 25%;
+			grid-gap: 5%;
+			z-index: 1;
+			position: relative;
+			padding: 7% 11%;
+			& .dashboardImg {
+				width: 195%;
+			}
+		}
+		@media screen and (max-width: 1018px) {
+			z-index: 1;
+			position: relative;
+			padding: 7% 25%;
+			& .dashboardImg {
+				padding-top: 15%;
+				width: 95%;
+			}
+		}
+
 		& .infoBlock {
 			font-family: sans-serif;
-			& .bigText {
-				padding-top: 8%;
-				@include bigText;
+			@media screen and (min-width: 1019px) {
+				& .bigText {
+					padding-top: 8%;
+					@include bigText;
+				}
 			}
+			@media screen and (max-width: 1018px) {
+				& .bigText {
+					text-align: center;
+					@include bigText;
+				}
+				& .p1 {
+					text-align: center;
+				}
+				& .p2 {
+					text-align: center;
+				}
+				& .btns {
+					padding-left: 2%;
+				}
+			}
+
 			& .p1 {
 				padding-top: 7%;
 				font-size: 110%;
@@ -62,9 +103,6 @@
 					@include boxShadow($buttonViolet);
 				}
 			}
-		}
-		& .dashboardImg {
-			width: 195%;
 		}
 	}
 	& .bottomLinear {

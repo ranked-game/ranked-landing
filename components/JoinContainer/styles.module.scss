@@ -37,10 +37,10 @@
 		border: none;
 		background-color: $footerViolet;
 		color: $footerViolet;
-		@media screen and (min-width: 1367px) {
+		@media screen and (min-width: 1437px) {
 			height: 2px;
 		}
-		@media screen and (max-width: 1366px) {
+		@media screen and (max-width: 1436px) {
 			height: 1px;
 		}
 	}

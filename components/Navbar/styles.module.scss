@@ -6,16 +6,48 @@
 	// top: 0;
 	// left: 0;
 	// z-index: 2;
-	@include navBarTemplate;
 
 	& .btnDwnl {
 		background-color: $buttonOrange;
 		width: 33%;
 		height: 90%;
+		font-size: 90%;
 		margin-left: 8%;
+		color: $colorWhite;
 	}
 	& .containerBtnDwnl {
 		padding-top: 30px;
 		text-align: end;
+	}
+
+	@media screen and (min-width: 1019px) {
+		@include navBarTemplate;
+	}
+	@media screen and (max-width: 1018px) {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 10%;
+		z-index: 1;
+		position: relative;
+		padding-left: 11%;
+		padding-right: 11%;
+
+		& .logo {
+			padding-top: 38px;
+			width: 38%;
+		}
+		& .btnUrl {
+			font-size: 90%;
+			text-align: center;
+			height: 100%;
+			color: #ffffff;
+			background-color: Transparent;
+			padding: 10px;
+			overflow: hidden;
+		}
+
+		& .containerBtnUrl {
+			display: none !important;
+		}
 	}
 }

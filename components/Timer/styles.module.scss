@@ -2,7 +2,15 @@
 .containerTimer {
 	padding-top: 3%;
 	display: grid;
-	grid-template-columns: 18% 3.8% 18% 3.8% 18% 3.8% 18%;
+
+	@media screen and (min-width: 1018px) {
+		grid-template-columns: 18% 3.8% 18% 3.8% 18% 3.8% 18%;
+	}
+	@media screen and (max-width: 1017px) {
+		grid-template-columns: 20% 3.8% 20% 3.8% 20% 3.8% 20%;
+		padding-left: 6%;
+	}
+
 	& .block {
 		width: 93%;
 		height: 109%;
