@@ -1,4 +1,4 @@
-// @import '../../theme/styles/palette.scss';
+@import '../../theme/styles/palette.scss';
 .containerTimer {
 	padding-top: 3%;
 	display: grid;
@@ -6,7 +6,7 @@
 	& .block {
 		width: 93%;
 		height: 109%;
-		background: #2d3664;
+		background: $timerGray;
 		border-radius: 7%;
 		& .time {
 			padding-top: 22%;
@@ -21,7 +21,7 @@
 			font-size: 93%;
 			line-height: 121%;
 			text-align: center;
-			color: #958cb9;
+			color: $paragraphGray;
 		}
 	}
 	& .twoPoints {

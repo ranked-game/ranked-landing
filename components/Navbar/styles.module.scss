@@ -1,38 +1,18 @@
 @import '../../theme/styles/palette.scss';
-.container {
-	display: grid;
-	grid-template-columns: 13.8% 40% auto;
-	grid-gap: 6%;
-	z-index: 1;
-	position: relative;
-	padding-left: 11%;
-	padding-right: 10%;
+@import '../../theme/styles/mixins.scss';
 
-	& .logo {
-		padding-top: 38px;
-		width: 81%;
-	}
-	& .btnUrl {
-		font-size: 97%;
-		// line-height: 20px;
-		text-align: center;
-		height: 100%;
-		color: #ffffff;
-		background-color: Transparent;
-		padding: 10px;
-		overflow: hidden;
-	}
+.container {
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	// z-index: 2;
+	@include navBarTemplate;
+
 	& .btnDwnl {
 		background-color: $buttonOrange;
 		width: 33%;
 		height: 90%;
 		margin-left: 8%;
-	}
-
-	& .containerBtnUrl {
-		padding-top: 30px;
-		display: grid;
-		grid-template-columns: auto auto auto;
 	}
 	& .containerBtnDwnl {
 		padding-top: 30px;

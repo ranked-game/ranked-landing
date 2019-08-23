@@ -1,8 +1,6 @@
 import Styles from './styles.module.scss';
 
-// const Logo = '../../static/assets/svg/logoGroup.svg';
-
-// const wave = '../../static/assets/images/bottom2.png';
+const dotterLine = '../../static/assets/svg/dotterLine.svg';
 
 const Benefit = (props) => (
 	<div className={Styles.container}>
@@ -17,6 +15,7 @@ const Benefit = (props) => (
 				<img className={Styles.imgBenefit} src={props.imgUrl} alt={'img'} />
 			</div>
 		)}
+		{props.dots && <img className={Styles.dotterLine} src={dotterLine} alt={'img'} />}
 	</div>
 );
 

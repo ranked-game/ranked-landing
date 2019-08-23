@@ -6,7 +6,8 @@ import StartupPage from '../components/StartupPage';
 import SupportedGamesContainer from '../components/SupportedGamesContainer';
 import FeaturesContainer from '../components/FeaturesContainer';
 import BenefitsContainer from '../components/BenefitsContainer';
-
+import JoinContainer from '../components/JoinContainer';
+import Footer from '../components/Footer';
 //Style
 import '../theme/styles/index.scss';
 
@@ -18,6 +19,7 @@ const Home = () => (
 		<SupportedGamesContainer />
 		<FeaturesContainer />
 		<BenefitsContainer />
+		<JoinContainer />
 	</div>
 );
 

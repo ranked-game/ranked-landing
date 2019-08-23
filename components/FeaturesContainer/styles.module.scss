@@ -2,15 +2,19 @@
 @import '../../theme/styles/mixins.scss';
 
 .container {
-	// float: left;
-	margin-top: 40%;
-
+	margin-top: 35%;
 	background-image: url(/static/assets/images/bottom2.png);
-
-	// transform: scale(1, -1);
 	background-repeat: no-repeat;
-	background-size: 230%;
-	padding-bottom: 7%;
+
+	@media screen and (min-width: 1367px) {
+		padding-bottom: 12%;
+		background-size: 230%;
+	}
+	@media screen and (max-width: 1366px) {
+		padding-bottom: 9%;
+		background-size: 245%;
+	}
+
 	& .bigText {
 		text-align: center;
 		@include bigText;
@@ -21,6 +25,6 @@
 		display: grid;
 		grid-template-columns: auto auto auto auto;
 		grid-gap: 5%;
-		padding: 5% 10% 10% 11%;
+		padding: 5% 10% 8% 10%;
 	}
 }

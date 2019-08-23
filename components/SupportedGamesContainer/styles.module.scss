@@ -3,8 +3,6 @@
 	float: left;
 	& .bigText {
 		@include bigText;
-		// position: absolute;
-		// padding-top: 100px;
 		font-family: sans-serif;
 		text-align: center;
 	}
@@ -48,11 +46,5 @@
 		@media screen and (max-width: 1366px) {
 			height: 10rem;
 		}
-		// @media screen and (min-width: 1367px) {
-		// 	top: 200%;
-		// }
-		// @media screen and (max-width: 1366px) {
-		// 	top: 202%;
-		// }
 	}
 }

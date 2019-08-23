@@ -1,0 +1,14 @@
+@import '../../theme/styles/mixins.scss';
+
+.container {
+	@include navBarTemplate;
+	padding-top: 10%;
+	padding-bottom: 2%;
+	& .contacts {
+		padding-top: 30px;
+		padding-left: 60%;
+		display: grid;
+		grid-gap: 5%;
+		grid-template-columns: auto auto auto;
+	}
+}

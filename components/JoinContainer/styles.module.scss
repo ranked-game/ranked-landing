@@ -1,0 +1,54 @@
+@import '../../theme/styles/palette.scss';
+@import '../../theme/styles/mixins.scss';
+
+.container {
+	background-image: url(/static/assets/svg/footerPage.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+	& .bigText {
+		text-align: center;
+		@include bigText;
+		margin-top: 18%;
+	}
+	& .paragraph {
+		font-family: sans-serif;
+		text-align: center;
+		font-size: 110%;
+		padding: 5% 34% 3% 34%;
+		line-height: 139.19%;
+	}
+	& .btns {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-gap: 5%;
+		padding: 0 37%;
+		& .fireBtnOrange {
+			@include boxShadow($buttonOrange);
+		}
+		& .fireBtnViolet {
+			@include boxShadow($buttonViolet);
+		}
+	}
+	& hr {
+		border: none;
+		background-color: $footerViolet;
+		color: $footerViolet;
+		@media screen and (min-width: 1367px) {
+			height: 2px;
+		}
+		@media screen and (max-width: 1366px) {
+			height: 1px;
+		}
+	}
+	& .textFooter {
+		font-size: 100%;
+		padding: 1% 0;
+		text-align: center;
+
+		color: $footerViolet;
+	}
+}

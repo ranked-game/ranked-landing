@@ -3,7 +3,7 @@
 	background-color: $color;
 	color: $colorWhite;
 	width: 90%;
-	height: 240%;
+	height: 250%;
 }
 
 @mixin bigText {
@@ -12,4 +12,34 @@
 	font-size: 210%;
 	line-height: 110%;
 	text-transform: uppercase;
+}
+
+@mixin navBarTemplate {
+	display: grid;
+	grid-template-columns: 13.8% 40% auto;
+	grid-gap: 6%;
+	z-index: 1;
+	position: relative;
+	padding-left: 11%;
+	padding-right: 10%;
+
+	& .logo {
+		padding-top: 38px;
+		width: 81%;
+	}
+	& .btnUrl {
+		font-size: 97%;
+		// line-height: 20px;
+		text-align: center;
+		height: 100%;
+		color: #ffffff;
+		background-color: Transparent;
+		padding: 10px;
+		overflow: hidden;
+	}
+	& .containerBtnUrl {
+		padding-top: 30px;
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
 }
