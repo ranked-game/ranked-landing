@@ -1,0 +1,53 @@
+// @import '../../theme/styles/palette.scss';
+// @import '../../theme/styles/mixins.scss';
+
+.container {
+	font-weight: bold;
+	font-size: 100%;
+	line-height: 150%;
+
+	text-transform: uppercase;
+	font-family: sans-serif;
+
+	& .right {
+		display: grid;
+		grid-template-columns: 60% 40%;
+		height: fit-content;
+
+		& .imgBenefit {
+			height: 139px;
+			width: 23%;
+
+			justify-self: end;
+			margin-right: 11%;
+		}
+		& .text {
+			margin-right: 45%;
+
+			display: flex;
+			justify-content: flex-start;
+			text-align: start;
+			align-items: center;
+		}
+	}
+
+	& .left {
+		display: grid;
+		grid-template-columns: 40% 60%;
+		height: fit-content;
+
+		& .imgBenefit {
+			height: 131px;
+			width: 21%;
+		}
+		& .text {
+			margin-left: 35%;
+			margin-right: 15%;
+
+			display: flex;
+			justify-content: flex-end;
+			text-align: end;
+			align-items: center;
+		}
+	}
+}

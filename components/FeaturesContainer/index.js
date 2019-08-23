@@ -2,6 +2,7 @@ import Styles from './styles.module.scss';
 
 import Feature from '../Feature';
 const feature = '../../static/assets/svg/';
+const wave = '../../static/assets/images/bottom2.png';
 
 const FeaturesContainer = () => (
 	<div className={Styles.container}>
@@ -28,6 +29,7 @@ const FeaturesContainer = () => (
 				your path to professional cybersport arenas"
 			/>
 		</div>
+		<div className={Styles.bigText}>WHAT WILL YOU GET ?</div>
 	</div>
 );
 
