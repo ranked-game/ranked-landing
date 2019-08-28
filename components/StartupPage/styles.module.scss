@@ -93,7 +93,7 @@
 				display: grid;
 
 				grid-row-gap: 2rem;
-				grid-template-rows: 5fr 2fr 1.5fr 11fr 4fr;
+				grid-template-rows: 5fr 2fr 1.5fr 10fr 4fr;
 				text-align: center;
 				& .btns {
 					padding: 0 3rem;
@@ -157,6 +157,7 @@
 		}
 	}
 }
+
 @media screen and (max-width: 400px) {
 	.container {
 		& .wave {

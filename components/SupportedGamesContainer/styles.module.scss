@@ -13,9 +13,10 @@
 		display: grid;
 		width: 100%;
 		grid-template-columns: 1fr 1fr;
-		height: 750px;
+		// height: 750px;
 
 		& .imgMain {
+			height: 700px;
 			display: grid;
 			background-repeat: no-repeat;
 			background-size: 180%;
@@ -32,8 +33,8 @@
 	.container {
 		padding-top: 9rem;
 		& .imagesBlock {
-			height: 600px;
 			& .imgMain {
+				height: 600px;
 				& .logo {
 					width: 45%;
 				}
@@ -41,12 +42,14 @@
 		}
 	}
 }
-@media screen and (max-width: 1650px) {
+
+@media screen and (max-width: 1550px) {
 	.container {
 		padding-top: 11rem;
 		& .imagesBlock {
-			height: 550px;
 			& .imgMain {
+				height: 550px;
+
 				& .logo {
 					width: 40%;
 				}
@@ -54,10 +57,13 @@
 		}
 	}
 }
+
 @media screen and (max-width: 1450px) {
 	.container {
 		& .imagesBlock {
-			height: 460px;
+			& .imgMain {
+				height: 460px;
+			}
 		}
 	}
 }
@@ -72,7 +78,7 @@
 			& .imgMain {
 				background-size: 140%;
 				background-position-x: 0;
-				height: inherit;
+				// height: inherit;
 			}
 		}
 	}
@@ -82,7 +88,9 @@
 	.container {
 		padding-top: 3rem;
 		& .imagesBlock {
-			height: 335px;
+			& .imgMain {
+				height: 335px;
+			}
 		}
 	}
 }
@@ -90,8 +98,9 @@
 @media screen and (max-width: 600px) {
 	.container {
 		& .imagesBlock {
-			height: 315px;
 			& .imgMain {
+				height: 315px;
+
 				background-size: 180%;
 			}
 		}
@@ -111,14 +120,18 @@
 			font-size: 19px;
 		}
 		& .imagesBlock {
-			height: 280px;
+			& .imgMain {
+				height: 280px;
+			}
 		}
 	}
 }
 @media screen and (max-width: 360px) {
 	.container {
 		& .imagesBlock {
-			height: 250px;
+			& .imgMain {
+				height: 250px;
+			}
 		}
 	}
 }

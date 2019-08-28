@@ -5,19 +5,23 @@ const facebook = '../../static/assets/svg/logoFb.svg';
 const tw = '../../static/assets/svg/logoTw.svg';
 
 const Footer = () => (
-	<div className={Styles.container}>
-		<img className={Styles.logo} src={Logo} alt={'logo'} />
-		<div className={Styles.containerBtnUrl}>
-			<button className={Styles.btnUrl}>Games avaible</button>
-			<button className={Styles.btnUrl}>Features</button>
-			<button className={Styles.btnUrl}>What you will get</button>
+	<>
+		<div className={Styles.container}>
+			<img className={Styles.logo} src={Logo} alt={'logo'} />
+			<div className={Styles.contacts}>
+				<img src={tw} alt={'tw'} />
+				<img src={facebook} alt={'facebook'} />
+				<img src={linkedin} alt={'linkedin'} />
+			</div>
+			<div className={Styles.anchorContainer}>
+				<a className={Styles.anchor}>Games avaible</a>
+				<a className={Styles.anchor}>Features</a>
+				<a className={Styles.anchor}>What you will get</a>
+			</div>
 		</div>
-		<div className={Styles.contacts}>
-			<img src={tw} alt={'tw'} />
-			<img src={facebook} alt={'facebook'} />
-			<img src={linkedin} alt={'linkedin'} />
-		</div>
-	</div>
+		<hr />
+		<div className={Styles.textFooter}>All rights reserved 2019 - Ranked Game</div>
+	</>
 );
 
 export default Footer;

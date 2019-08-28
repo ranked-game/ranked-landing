@@ -1,14 +1,75 @@
 @import '../../theme/styles/mixins.scss';
+@import '../../theme/styles/palette.scss';
 
 .container {
-	@include navBarTemplate;
-	padding-top: 10%;
-	padding-bottom: 2%;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 1fr;
+	padding: 0 5% 1%;
+	place-items: center;
+
+	& .logo {
+		width: 81%;
+	}
+	& .anchorContainer {
+		place-self: center start;
+
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: repeat(3, 1fr);
+		place-items: center center;
+
+		& .anchor {
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+
 	& .contacts {
-		padding-top: 30px;
-		padding-left: 60%;
 		display: grid;
 		grid-gap: 5%;
 		grid-template-columns: auto auto auto;
+
+		padding-left: 60%;
+		cursor: pointer;
+	}
+}
+
+hr {
+	border: none;
+	background-color: $footerViolet;
+	color: $footerViolet;
+	height: 2px;
+}
+
+.textFooter {
+	padding: 1% 0;
+	text-align: center;
+	color: $footerViolet;
+}
+
+@media screen and (max-width: 1436px) {
+	hr {
+		height: 1px;
+	}
+}
+@media screen and (max-width: 1030px) {
+	.container {
+		grid-column: 1fr 3fr;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.textFooter {
+		font-size: 15px;
+	}
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 2%;
+
+		& .logo {
+			place-self: start;
+			width: 40%;
+		}
 	}
 }

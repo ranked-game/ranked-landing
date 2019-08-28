@@ -3,40 +3,64 @@
 
 .container {
 	display: grid;
-	// float: left;
-	margin-top: 38%;
 	background-image: url(/static/assets/images/bottom2.png);
+	background-size: cover;
 	background-repeat: no-repeat;
+	// padding-bottom: 100px;
 
-	@media screen and (min-width: 1437px) {
-		padding-bottom: 12%;
-		background-size: 180%;
-		& .table {
-			padding: 5% 10% 8% 10%;
-			grid-template-columns: auto auto auto auto;
-		}
-		& .bigText {
-			padding-right: 5%;
-		}
-	}
-	@media screen and (max-width: 1436px) {
-		padding-bottom: 9%;
-		background-size: 235%;
-		& .table {
-			padding: 3% 32% 6% 28%;
-			grid-template-columns: auto auto;
-		}
-		& .bigText {
-			padding-right: 5%;
-		}
-	}
-	& .table {
+	& .featureTable {
+		padding: 5% 10% 10% 10%;
+		grid-template-columns: auto auto auto auto;
 		text-align: center;
 		display: grid;
 		grid-gap: 5%;
 	}
+
 	& .bigText {
 		text-align: center;
 		@include bigText;
+		font-size: 30px;
+		padding-right: 5%;
+	}
+}
+
+@media screen and (max-width: 1430px) {
+	.container {
+		// padding-bottom: 150px;
+		& .featureTable {
+			padding: 3% 32% 10% 28%;
+			grid-template-columns: auto auto;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.container {
+		& .featureTable {
+			grid-template-columns: auto;
+			grid-gap: 0;
+		}
+		& .bigText {
+			padding-right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.container {
+		background: none;
+		& .featureTable {
+			padding: 8% 3%;
+		}
+		& .bigText {
+			font-size: 23px;
+		}
+	}
+}
+@media screen and (max-width: 400px) {
+	.container {
+		& .bigText {
+			font-size: 19px;
+		}
 	}
 }

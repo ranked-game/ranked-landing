@@ -7,7 +7,8 @@ const wave = '../../static/assets/images/bottom2.png';
 const FeaturesContainer = () => (
 	<div className={Styles.container}>
 		<div className={Styles.bigText}>Features</div>
-		<div className={Styles.table}>
+
+		<div className={Styles.featureTable}>
 			<Feature
 				imgUrl={feature + 'feature' + 1 + '.svg'}
 				text="Climb up Solo ladders and get 
@@ -29,7 +30,6 @@ const FeaturesContainer = () => (
 				your path to professional cybersport arenas"
 			/>
 		</div>
-		<div className={Styles.bigText}>WHAT WILL YOU GET ?</div>
 	</div>
 );
 

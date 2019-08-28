@@ -1,3 +1,13 @@
+@import '../../theme/styles/mixins.scss';
 .container {
-	display: grid;
+	& .bigText {
+		text-align: center;
+		@include bigText;
+		font-size: 30px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.container {
+		display: none;
+	}
 }

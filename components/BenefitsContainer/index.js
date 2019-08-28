@@ -1,9 +1,11 @@
 import Benefit from '../Benefit';
 import Styles from './styles.module.scss';
+
 const benefit = '../../static/assets/svg/';
 
 const BenefitsContainer = () => (
 	<div className={Styles.container}>
+		<div className={Styles.bigText}>WHAT WILL YOU GET ?</div>
 		<Benefit
 			imgUrl={benefit + 'benefit' + 1 + '.svg'}
 			text="Early access"

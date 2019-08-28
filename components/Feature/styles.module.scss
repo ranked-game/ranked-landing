@@ -2,33 +2,26 @@
 @import '../../theme/styles/mixins.scss';
 
 .container {
-	@media screen and (min-width: 1437px) {
-		padding: 3% 0;
-		& .imgFeature {
-			padding: 3% 0;
-		}
-		& .textFeature {
-			padding-top: 5%;
-		}
-	}
-	@media screen and (max-width: 1436px) {
-		& .textFeature {
-			padding: 2% 4%;
-		}
-	}
+	padding: 3% 0;
+
 	& .imgFeature {
-		// padding: 3% 0;
+		padding: 3% 0;
 		width: 79%;
 		height: 170px;
 		align-content: center;
 	}
 	& .textFeature {
-		font-family: sans-serif;
-		font-weight: normal;
 		font-size: 90%;
 		text-align: center;
-		position: relative;
 		line-height: 140%;
-		// padding-top: 5%;
+		padding-top: 5%;
+	}
+}
+
+@media screen and (max-width: 1436px) {
+	.container {
+		& .textFeature {
+			padding: 2% 4%;
+		}
 	}
 }

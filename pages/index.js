@@ -17,9 +17,10 @@ const Home = () => (
 		<Navbar />
 		<StartupPage />
 		<SupportedGamesContainer />
-		{/* <FeaturesContainer /> */}
-		{/* <BenefitsContainer /> */}
-		{/* <JoinContainer /> */}
+		<FeaturesContainer />
+		<BenefitsContainer />
+		<JoinContainer />
+		<Footer />
 	</div>
 );
 
