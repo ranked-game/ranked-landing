@@ -40,8 +40,9 @@
 
 			& .btns {
 				display: grid;
-				grid-template-columns: auto auto;
+				grid-template-columns: 45% 45%;
 				grid-gap: 10%;
+				height: 50px;
 				& .fireBtnOrange {
 					@include boxShadow($buttonOrange);
 				}
@@ -75,12 +76,30 @@
 }
 @media screen and (max-width: 1400px) {
 	.container {
+		& .table {
+			& .infoBlock {
+				grid-template-rows: 3fr 1fr 1fr 2.3fr 1.5fr;
+				padding: 1rem 0;
+				grid-row-gap: 0.6rem;
+				& .btns {
+					margin: 10px 0 0;
+				}
+			}
+		}
 		& .wave {
 			margin: -12rem 0;
 		}
 	}
 }
-
+@media screen and (max-width: 1062px) {
+	.container {
+		& .table {
+			& .infoBlock {
+				grid-template-rows: 1.5fr 0.8fr 0.2fr 1fr 1fr;
+			}
+		}
+	}
+}
 @media screen and (max-width: 1030px) {
 	.container {
 		width: 100%;
@@ -93,7 +112,8 @@
 				display: grid;
 
 				grid-row-gap: 2rem;
-				grid-template-rows: 5fr 2fr 1.5fr 10fr 4fr;
+				grid-template-rows: 5fr 1fr 0.5fr 5fr 4fr;
+				// grid-template-rows: 5fr 2fr 1.5fr 10fr 4fr;
 				text-align: center;
 				& .btns {
 					padding: 0 3rem;
@@ -124,6 +144,7 @@
 		& .table {
 			padding: 7rem 4rem 0;
 			& .infoBlock {
+				grid-template-rows: 1.5fr 0.5fr 0.2fr 0.5fr 1fr;
 				& .btns {
 					padding: 0 1rem;
 				}

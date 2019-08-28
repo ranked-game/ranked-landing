@@ -8,16 +8,17 @@ const Footer = () => (
 	<>
 		<div className={Styles.container}>
 			<img className={Styles.logo} src={Logo} alt={'logo'} />
-			<div className={Styles.contacts}>
-				<img src={tw} alt={'tw'} />
-				<img src={facebook} alt={'facebook'} />
-				<img src={linkedin} alt={'linkedin'} />
-			</div>
 			<div className={Styles.anchorContainer}>
 				<a className={Styles.anchor}>Games avaible</a>
 				<a className={Styles.anchor}>Features</a>
 				<a className={Styles.anchor}>What you will get</a>
 			</div>
+			<div className={Styles.contacts}>
+				<img src={tw} alt={'tw'} />
+				<img src={facebook} alt={'facebook'} />
+				<img src={linkedin} alt={'linkedin'} />
+			</div>
+			
 		</div>
 		<hr />
 		<div className={Styles.textFooter}>All rights reserved 2019 - Ranked Game</div>

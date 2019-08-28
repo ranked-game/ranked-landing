@@ -79,6 +79,9 @@
 				background-size: 140%;
 				background-position-x: 0;
 				// height: inherit;
+				& .logo {
+					width: 30%;
+				}
 			}
 		}
 	}

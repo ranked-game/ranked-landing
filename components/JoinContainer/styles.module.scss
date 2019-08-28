@@ -87,5 +87,21 @@
 @media screen and (max-width: 440px) {
 	.container {
 		padding: 10%;
+		& .bigText {
+			font-size: 20px;
+		}
+		& .paragraph {
+			font-size: 13px;
+		}
+		& .buttons {
+			padding: 0px 7%;
+			font-size: 11px;
+			& .buttonOrange {
+				padding: 7px;
+			}
+			& .buttonViolet {
+				padding: 7px;
+			}
+		}
 	}
 }

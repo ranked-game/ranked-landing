@@ -25,3 +25,11 @@
 		}
 	}
 }
+
+@media screen and (max-width: 555px) {
+	.container {
+		& .imgFeature {
+			height: 150px;
+		}
+	}
+}

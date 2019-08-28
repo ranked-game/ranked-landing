@@ -4,7 +4,7 @@
 .container {
 	display: grid;
 	grid-template-rows: 1fr;
-	grid-template-columns: 0.7fr 1fr 1fr 0fr;
+	grid-template-columns: 0.7fr 1.5fr 1fr 0fr;
 	grid-column-gap: 1rem;
 	place-items: center center;
 
@@ -81,9 +81,12 @@
 
 @media screen and (max-width: 500px) {
 	.container {
-		grid-template-columns: 1fr 1.5fr 0.5fr;
+		grid-template-columns: 1fr 1fr 0.5fr;
 		padding: 1rem 1rem;
 		font-size: 13px;
+		& .download {
+			padding: 0.8rem;
+		}
 		& .logo {
 			height: 2.5rem;
 		}
