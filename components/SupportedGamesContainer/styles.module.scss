@@ -1,68 +1,124 @@
 @import '../../theme/styles/mixins.scss';
 .container {
-	float: left;
+	display: grid;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
 	& .bigText {
 		@include bigText;
-		font-family: sans-serif;
 		text-align: center;
+		font-size: 30px;
 	}
-	@media screen and (min-width: 1019px) {
-		& .top {
-			height: 80%;
-		}
-	}
-	@media screen and (max-width: 1018px) {
-		& .top {
-			height: 45%;
-		}
-	}
-	& .top {
-		width: 100%;
-		position: absolute;
-		transform: rotate(180deg);
-	}
-	& .table {
+
+	& .imagesBlock {
 		display: grid;
-		padding-top: 4%;
 		width: 100%;
-
-		grid-template-columns: 50% 50%;
-
-		@media screen and (min-width: 1019px) {
-			height: 25rem;
-		}
-		@media screen and (max-width: 1018px) {
-			height: 11rem;
-		}
+		grid-template-columns: 1fr 1fr;
+		height: 750px;
 
 		& .imgMain {
-			width: 100%;
-		}
-		& .logoLol {
-			position: relative;
-			width: 70%;
-			top: -50%;
-			left: 15%;
-		}
-		& .logoDota {
-			position: relative;
-			text-align: center;
-			width: 40%;
-			top: -55%;
-			left: 33%;
+			display: grid;
+			background-repeat: no-repeat;
+			background-size: 180%;
+			background-position-x: 8%;
+			& .logo {
+				place-self: center;
+				width: 50%;
+			}
 		}
 	}
-	& .bottom {
-		width: 100%;
+}
 
-		@media screen and (min-width: 1437px) {
-			height: 19rem;
+@media screen and (max-width: 1650px) {
+	.container {
+		padding-top: 9rem;
+		& .imagesBlock {
+			height: 600px;
+			& .imgMain {
+				& .logo {
+					width: 45%;
+				}
+			}
 		}
-		@media screen and (max-width: 1436px) and (min-width: 1019px) {
-			height: 10rem;
+	}
+}
+@media screen and (max-width: 1650px) {
+	.container {
+		padding-top: 11rem;
+		& .imagesBlock {
+			height: 550px;
+			& .imgMain {
+				& .logo {
+					width: 40%;
+				}
+			}
 		}
-		@media screen and (max-width: 1018px) {
-			height: 16rem;
+	}
+}
+@media screen and (max-width: 1450px) {
+	.container {
+		& .imagesBlock {
+			height: 460px;
+		}
+	}
+}
+
+@media screen and (max-width: 1030px) {
+	.container {
+		& .imagesBlock {
+			display: grid;
+			width: 100%;
+			grid-template-columns: 1fr;
+
+			& .imgMain {
+				background-size: 140%;
+				background-position-x: 0;
+				height: inherit;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		padding-top: 3rem;
+		& .imagesBlock {
+			height: 335px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		& .imagesBlock {
+			height: 315px;
+			& .imgMain {
+				background-size: 180%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.container {
+		& .bigText {
+			font-size: 23px;
+		}
+	}
+}
+@media screen and (max-width: 400px) {
+	.container {
+		& .bigText {
+			font-size: 19px;
+		}
+		& .imagesBlock {
+			height: 280px;
+		}
+	}
+}
+@media screen and (max-width: 360px) {
+	.container {
+		& .imagesBlock {
+			height: 250px;
 		}
 	}
 }

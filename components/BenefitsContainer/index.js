@@ -1,8 +1,9 @@
 import Benefit from '../Benefit';
+import Styles from './styles.module.scss';
 const benefit = '../../static/assets/svg/';
 
 const BenefitsContainer = () => (
-	<>
+	<div className={Styles.container}>
 		<Benefit
 			imgUrl={benefit + 'benefit' + 1 + '.svg'}
 			text="Early access"
@@ -27,7 +28,7 @@ const BenefitsContainer = () => (
 			position="right"
 			dots={false}
 		/>
-	</>
+	</div>
 );
 
 export default BenefitsContainer;

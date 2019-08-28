@@ -2,52 +2,95 @@
 @import '../../theme/styles/mixins.scss';
 
 .container {
-	// position: fixed;
-	// top: 0;
-	// left: 0;
-	// z-index: 2;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 0.7fr 1fr 1fr 0fr;
+	grid-column-gap: 1rem;
+	place-items: center center;
 
-	& .btnDwnl {
-		background-color: $buttonOrange;
-		width: 33%;
-		height: 90%;
-		font-size: 90%;
-		margin-left: 8%;
-		color: $colorWhite;
-	}
-	& .containerBtnDwnl {
-		padding-top: 30px;
-		text-align: end;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+
+	padding: 1rem 4rem;
+
+	width: 100vw;
+	height: 5.5rem;
+
+	background: linear-gradient(#0d013c 60%, transparent);
+
+	& .logo {
+		place-self: center center;
+
+		height: 100%;
 	}
 
-	@media screen and (min-width: 1019px) {
-		@include navBarTemplate;
-	}
-	@media screen and (max-width: 1018px) {
+	& .anchorContainer {
+		place-self: center start;
+
 		display: grid;
-		grid-template-columns: auto auto;
-		grid-gap: 10%;
-		z-index: 1;
-		position: relative;
-		padding-left: 11%;
-		padding-right: 11%;
+		grid-template-rows: 1fr;
+		grid-template-columns: repeat(3, 1fr);
+		place-items: center center;
 
-		& .logo {
-			padding-top: 38px;
-			width: 38%;
-		}
-		& .btnUrl {
-			font-size: 90%;
+		& .anchor {
 			text-align: center;
-			height: 100%;
-			color: #ffffff;
-			background-color: Transparent;
-			padding: 10px;
-			overflow: hidden;
+			cursor: pointer;
 		}
+	}
 
-		& .containerBtnUrl {
-			display: none !important;
+	& .signup {
+		cursor: pointer;
+		text-align: end;
+		place-self: center end;
+	}
+
+	& .download {
+		cursor: pointer;
+
+		place-self: center start;
+
+		padding: 0.8rem 1.5rem;
+		text-align: center;
+		background: $buttonOrange;
+	}
+}
+
+@media screen and (max-width: 1030px) {
+	.container {
+		grid-template-columns: 1.75fr 3fr 1fr;
+		& .signup {
+			place-self: center;
+			text-align: end;
 		}
+		& .download {
+			text-align: center;
+		}
+		& .anchorContainer {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.container {
+		grid-template-columns: 2fr 3fr 1fr;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.container {
+		grid-template-columns: 1fr 1.5fr 0.5fr;
+		padding: 1rem 1rem;
+		font-size: 13px;
+		& .logo {
+			height: 2.5rem;
+		}
+	}
+}
+@media screen and (max-width: 360px) {
+	.container {
+		font-size: 12px;
 	}
 }

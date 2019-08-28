@@ -2,15 +2,11 @@
 	box-shadow: 0rem 0.25rem 1.5625rem $color;
 	background-color: $color;
 	color: $colorWhite;
-	width: 90%;
-	height: 250%;
 }
 
 @mixin bigText {
 	font-family: sans-serif;
 	font-weight: bold;
-	font-size: 210%;
-	line-height: 110%;
 	text-transform: uppercase;
 }
 

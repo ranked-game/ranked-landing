@@ -1,40 +1,86 @@
 @import '../../theme/styles/palette.scss';
+
 .containerTimer {
-	padding-top: 3%;
 	display: grid;
-
-	@media screen and (min-width: 1018px) {
-		grid-template-columns: 18% 3.8% 18% 3.8% 18% 3.8% 18%;
-	}
-	@media screen and (max-width: 1017px) {
-		grid-template-columns: 20% 3.8% 20% 3.8% 20% 3.8% 20%;
-		padding-left: 6%;
-	}
-
+	grid-template-columns: 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
+	place-content: center center;
+	height: 7rem;
 	& .block {
-		width: 93%;
-		height: 109%;
+		padding: 2rem 0rem;
+		text-align: center;
 		background: $timerGray;
 		border-radius: 7%;
+		height: 100%;
 		& .time {
-			padding-top: 22%;
 			font-weight: bold;
-			font-size: 187%;
-			line-height: 121%;
-			text-align: center;
 			text-transform: uppercase;
+			font-size: 26px;
 		}
 		& .nameTime {
-			padding-top: 13%;
-			font-size: 93%;
-			line-height: 121%;
-			text-align: center;
 			color: $paragraphGray;
+			font-size: 22px;
 		}
 	}
 	& .twoPoints {
-		display: flex;
-		align-items: center;
-		font-size: 162%;
+		text-align: center;
+		place-self: center;
+	}
+}
+
+@media screen and (max-width: 1030px) {
+	.containerTimer {
+		padding: 0rem 4rem;
+		& .block {
+			height: 8rem;
+			padding: 2rem 1rem;
+		}
+	}
+}
+@media screen and (max-width: 882px) {
+	.containerTimer {
+		& .block {
+			padding: 2rem 0rem;
+			& .time {
+				font-size: 24px;
+			}
+			& .nameTime {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 882px) {
+	.containerTimer {
+		& .block {
+			& .time {
+				font-size: 22px;
+			}
+			& .nameTime {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.containerTimer {
+		padding: 0rem 1rem;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.containerTimer {
+		padding: 0rem 0.1rem;
+		& .block {
+			padding: 2rem 0rem;
+			& .time {
+				font-size: 20px;
+				padding-bottom: 10%;
+			}
+			& .nameTime {
+				font-size: 14px;
+			}
+		}
 	}
 }

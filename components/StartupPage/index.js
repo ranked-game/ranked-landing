@@ -7,9 +7,6 @@ const boxbottom2 = '/static/assets/images/bottom2.png';
 
 const StartupPage = () => (
 	<div className={Styles.container}>
-		<div className={Styles.bgContainer} />
-		<div className={Styles.topLinear} />
-
 		<div className={Styles.table}>
 			<div className={Styles.infoBlock}>
 				<div className={Styles.bigText}>lead the competition and win prizes</div>
@@ -27,8 +24,7 @@ const StartupPage = () => (
 
 			<img className={Styles.dashboardImg} src={Dashboard} alt={'dashboard'} />
 		</div>
-		<img className={Styles.bottomLinear} src={boxbottom1} alt={'bottom1'} />
-		<img className={Styles.test} src={boxbottom2} alt={'bottom2'} />
+		<img className={Styles.wave} src={boxbottom2} alt={'bottom2'} />
 	</div>
 );
 
