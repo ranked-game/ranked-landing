@@ -33,9 +33,15 @@
 			padding: 15px;
 			@include boxShadow($buttonOrange);
 		}
+		& .buttonOrange:hover {
+			transform: scale(1.1);
+		}
 		& .buttonViolet {
 			padding: 15px;
 			@include boxShadow($buttonViolet);
+		}
+		& .buttonViolet:hover {
+			transform: scale(1.1);
 		}
 	}
 	& hr {

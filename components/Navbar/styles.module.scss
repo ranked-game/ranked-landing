@@ -25,6 +25,7 @@
 
 		height: 100%;
 	}
+	@include aTemplate;
 
 	& .anchorContainer {
 		place-self: center start;
@@ -38,12 +39,36 @@
 			text-align: center;
 			cursor: pointer;
 		}
+		& .anchor:before {
+			border: 1px solid white;
+			border-left: 0;
+			border-right: 0;
+		}
+
+		& .anchor:hover:before {
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
 	}
 
 	& .signup {
 		cursor: pointer;
 		text-align: end;
 		place-self: center end;
+		width: max-content;
+		padding: 10px 20px;
+	}
+	& .signup:before {
+		border: 1px solid white;
+		border-left: 0;
+		border-right: 0;
+	}
+
+	& .signup:hover:before {
+		bottom: 0;
+		left: 0;
+		width: 100%;
 	}
 
 	& .download {
@@ -54,6 +79,9 @@
 		padding: 0.8rem 1.5rem;
 		text-align: center;
 		background: $buttonOrange;
+	}
+	& .download:hover {
+		background-color: $buttonViolet;
 	}
 }
 

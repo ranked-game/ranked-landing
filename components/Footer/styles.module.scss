@@ -10,6 +10,7 @@
 	& .logo {
 		width: 81%;
 	}
+	@include aTemplate;
 	& .anchorContainer {
 		place-self: center start;
 
@@ -22,6 +23,17 @@
 			text-align: center;
 			cursor: pointer;
 		}
+		& .anchor:before {
+			border: 1px solid white;
+			border-left: 0;
+			border-right: 0;
+		}
+
+		& .anchor:hover:before {
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
 	}
 
 	& .contacts {
@@ -31,6 +43,9 @@
 
 		padding-left: 60%;
 		cursor: pointer;
+		& .icon:hover {
+			transform: scale(1.1);
+		}
 	}
 }
 
