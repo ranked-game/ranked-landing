@@ -15,7 +15,7 @@ const StartupPage = () => (
 					prizes.
 				</div>
 				<div className={Styles.p2}>Time to open beta:</div>
-				<Timer />
+				<Timer seconds={100000} />
 				<div className={Styles.btns}>
 					<button className={Styles.fireBtnViolet}>Try beta</button>
 					<button className={Styles.fireBtnOrange}>Download</button>
