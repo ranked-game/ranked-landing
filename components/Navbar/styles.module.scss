@@ -88,13 +88,6 @@
 @media screen and (max-width: 1030px) {
 	.container {
 		grid-template-columns: 1.75fr 3fr 1fr;
-		& .signup {
-			place-self: center;
-			text-align: end;
-		}
-		& .download {
-			text-align: center;
-		}
 		& .anchorContainer {
 			display: none;
 		}

@@ -1,4 +1,6 @@
+// Styles
 import Styles from './styles.module.scss';
+
 const Logo = '../../static/assets/svg/logoGroup.svg';
 const linkedin = '../../static/assets/svg/logoLinkedIn.svg';
 const facebook = '../../static/assets/svg/logoFb.svg';
