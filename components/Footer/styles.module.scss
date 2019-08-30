@@ -68,15 +68,19 @@ hr {
 	}
 }
 @media screen and (max-width: 1030px) {
-	@media screen and (max-width: 1030px) {
-		.container {
-			display: grid;
-			grid-template-columns: 1fr 2.5fr;
-			padding: 3%;
-
-			& .anchorContainer {
-				display: none;
-			}
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 2.5fr;
+		padding: 3%;
+		& .logo {
+			width: 55%;
+		}
+		& .contacts {
+			padding-left: 65%;
+			padding-right: 5%;
+		}
+		& .anchorContainer {
+			display: none;
 		}
 	}
 }
@@ -87,12 +91,17 @@ hr {
 	}
 	.container {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
 		padding: 5%;
 
 		& .logo {
-			place-self: start;
-			width: 40%;
+			place-self: center;
+			width: 65%;
+			padding-bottom: 16px;
+		}
+		& .contacts {
+			place-self: center;
+			padding: 10px 20%;
 		}
 	}
 }
