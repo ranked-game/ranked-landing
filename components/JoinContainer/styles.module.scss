@@ -2,112 +2,113 @@
 @import '../../theme/styles/mixins.scss';
 
 .container {
-	background-image: url(/static/assets/svg/footerPage.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: grid;
-	width: 100%;
-	padding: 15% 0;
+    background-image: url(/static/assets/svg/footerPage.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    width: 100%;
+    padding: 15% 0;
 
-	& .bigText {
-		text-align: center;
-		@include bigText;
-		font-size: 30px;
-	}
+    & .bigText {
+        text-align: center;
+        @include bigText;
+        font-size: 30px;
+    }
 
-	& .paragraph {
-		font-family: sans-serif;
-		text-align: center;
-		font-size: 110%;
-		padding: 5% 34% 3% 34%;
-		line-height: 139.19%;
-	}
+    & .paragraph {
+        font-family: sans-serif;
+        text-align: center;
+        font-size: 110%;
+        padding: 5% 34% 3% 34%;
+        line-height: 139.19%;
+    }
 
-	& .buttons {
-		display: grid;
-		grid-template-columns: 50% 50%;
-		grid-gap: 5%;
-		padding: 0 37%;
+    & .buttons {
+        display: grid;
+        // grid-template-columns: 45% 45%;
+        // grid-gap: 10%;
+        place-items: center center;
+        height: 50px;
 
-		& .buttonOrange {
-			padding: 15px;
-			@include boxShadow($buttonOrange);
-		}
-		& .buttonOrange:hover {
-			transform: scale(1.1);
-		}
-		& .buttonViolet {
-			padding: 15px;
-			@include boxShadow($buttonViolet);
-		}
-		& .buttonViolet:hover {
-			transform: scale(1.1);
-		}
-	}
-	& hr {
-		border: none;
-		background-color: $footerViolet;
-		color: $footerViolet;
-		height: 2px;
-	}
-	& .textFooter {
-		padding: 1% 0;
-		text-align: center;
-		color: $footerViolet;
-	}
+        transition: all 0.5s;
+
+        & .buttonOrange {
+            @include boxShadow($buttonOrange);
+
+            height: 100%;
+            width: 30%;
+
+            transition: all 0.2s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    & hr {
+        border: none;
+        background-color: $footerViolet;
+        color: $footerViolet;
+        height: 2px;
+    }
+    & .textFooter {
+        padding: 1% 0;
+        text-align: center;
+        color: $footerViolet;
+    }
 }
 
 @media screen and (max-width: 1436px) {
-	.container {
-		& hr {
-			height: 1px;
-		}
-	}
+    .container {
+        & hr {
+            height: 1px;
+        }
+    }
 }
 
 @media screen and (max-width: 840px) {
-	.container {
-		background-size: 150%;
-		background-position: center;
-		padding: 20%;
-		& .bigText {
-			font-size: 22px;
-		}
-		& .paragraph {
-			font-size: 100%;
-			padding: 10px 0;
-		}
-		& .buttons {
-			grid-gap: 2%;
-			padding: 0px 3%;
-			& .buttonOrange {
-				padding: 10px;
-			}
-			& .buttonViolet {
-				padding: 10px;
-			}
-		}
-	}
+    .container {
+        background-size: 150%;
+        background-position: center;
+        padding: 20%;
+        & .bigText {
+            font-size: 22px;
+        }
+        & .paragraph {
+            font-size: 100%;
+            padding: 10px 0;
+        }
+        & .buttons {
+            grid-gap: 2%;
+            padding: 0px 3%;
+            & .buttonOrange {
+                padding: 10px;
+            }
+            & .buttonViolet {
+                padding: 10px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 440px) {
-	.container {
-		padding: 10%;
-		& .bigText {
-			font-size: 20px;
-		}
-		& .paragraph {
-			font-size: 13px;
-		}
-		& .buttons {
-			padding: 0px 7%;
-			font-size: 11px;
-			& .buttonOrange {
-				padding: 7px;
-			}
-			& .buttonViolet {
-				padding: 7px;
-			}
-		}
-	}
+    .container {
+        padding: 10%;
+        & .bigText {
+            font-size: 20px;
+        }
+        & .paragraph {
+            font-size: 13px;
+        }
+        & .buttons {
+            padding: 0px 7%;
+            font-size: 11px;
+            & .buttonOrange {
+                padding: 7px;
+            }
+            & .buttonViolet {
+                padding: 7px;
+            }
+        }
+    }
 }
