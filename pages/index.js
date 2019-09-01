@@ -23,12 +23,6 @@ class Home extends React.Component {
 
     scrollToTop = () => {
         scroll.scrollToTop();
-
-        setTimeout(() => {
-            this.setState({
-                scrollToTop: false,
-            });
-        }, 3000);
     };
 
     _onScroll = () => {
@@ -37,6 +31,12 @@ class Home extends React.Component {
         if (!scrollToTop && window.scrollY > 400) {
             return this.setState({
                 scrollToTop: true,
+            });
+        }
+
+        if (scrollToTop && window.scrollY < 200) {
+            return this.setState({
+                scrollToTop: false,
             });
         }
     };
