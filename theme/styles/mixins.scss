@@ -10,32 +10,19 @@
 	text-transform: uppercase;
 }
 
-@mixin navBarTemplate {
-	display: grid;
-	grid-template-columns: 13.8% 40% auto;
-	grid-gap: 6%;
-	// z-index: 1;
-	// position: relative;
-	padding-left: 11%;
-	padding-right: 10%;
+@mixin aTemplate {
+	& a {
+		position: relative;
+		padding: 10px 0;
+		color: white;
+		cursor: pointer;
+	}
 
-	& .logo {
-		// padding-top: 38px;
-		width: 81%;
-	}
-	& .btnUrl {
-		// font-size: 97%;
-		// line-height: 20px;
-		text-align: center;
-		// height: 100%;
-		color: #ffffff;
-		background-color: Transparent;
-		padding: 10px;
-		overflow: hidden;
-	}
-	& .containerBtnUrl {
-		// padding-top: 30px;
-		display: grid;
-		grid-template-columns: auto auto auto;
+	& a:before,
+	& a:after {
+		content: '';
+		position: absolute;
+		transition: inherit;
+		z-index: -1;
 	}
 }

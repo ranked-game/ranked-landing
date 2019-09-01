@@ -1,3 +1,4 @@
+// Styles
 import Styles from './styles.module.scss';
 
 const dotterLine = '../../static/assets/svg/dotterLine.svg';

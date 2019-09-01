@@ -1,4 +1,6 @@
+// Styles
 import Styles from './styles.module.scss';
+
 const Logo = '../../static/assets/svg/logoGroup.svg';
 const linkedin = '../../static/assets/svg/logoLinkedIn.svg';
 const facebook = '../../static/assets/svg/logoFb.svg';
@@ -14,11 +16,10 @@ const Footer = () => (
 				<a className={Styles.anchor}>What you will get</a>
 			</div>
 			<div className={Styles.contacts}>
-				<img src={tw} alt={'tw'} />
-				<img src={facebook} alt={'facebook'} />
-				<img src={linkedin} alt={'linkedin'} />
+				<img className={Styles.icon} src={tw} alt={'tw'} />
+				<img className={Styles.icon} src={facebook} alt={'facebook'} />
+				<img className={Styles.icon} src={linkedin} alt={'linkedin'} />
 			</div>
-			
 		</div>
 		<hr />
 		<div className={Styles.textFooter}>All rights reserved 2019 - Ranked Game</div>

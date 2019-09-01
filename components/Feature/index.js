@@ -1,3 +1,4 @@
+// Styles
 import Styles from './styles.module.scss';
 
 const Feature = (props) => (

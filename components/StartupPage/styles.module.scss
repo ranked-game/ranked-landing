@@ -46,8 +46,14 @@
 				& .fireBtnOrange {
 					@include boxShadow($buttonOrange);
 				}
+				& .fireBtnOrange:hover {
+					transform: scale(1.2);
+				}
 				& .fireBtnViolet {
 					@include boxShadow($buttonViolet);
+				}
+				& .fireBtnViolet:hover {
+					transform: scale(1.2);
 				}
 			}
 		}
