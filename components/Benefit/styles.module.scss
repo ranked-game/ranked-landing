@@ -1,50 +1,79 @@
 .container {
-	font-weight: bold;
-	text-transform: uppercase;
-	font-family: sans-serif;
-	font-size: 20px;
+    display: grid;
+    grid-template-rows: 6rem 6rem;
+    grid-template-columns: 45% 10% 45%;
 
-	padding-top: 5%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 20px;
 
-	& .dotterLine {
-		height: 100px;
-		margin-bottom: -90px;
-	}
+    padding-top: 5%;
 
-	& .right {
-		display: grid;
-		grid-template-columns: 55% 45%;
+    & .dotterLine {
+        grid-row: 2;
+        grid-column: 1 / 4;
+        place-self: center center;
 
-		& .imgBenefit {
-			padding-left: 82%;
-		}
-		& .text {
-			display: grid;
-			place-items: center start;
-			padding: 0 30% 0 30px;
-			text-align: start;
-		}
-	}
+        height: 100px;
+        margin-bottom: -90px;
+    }
 
-	& .left {
-		display: grid;
-		grid-template-columns: 45% 55%;
+    & .imgBenefit {
+        grid-row: 1;
+        grid-column: 2;
+        place-self: center center;
 
-		& .imgBenefit {
-			padding-right: 82%;
-		}
-		& .text {
-			display: grid;
-			place-items: center end;
-			padding: 0 30px 0 30%;
-			text-align: end;
-		}
-	}
+        &:hover {
+            animation: shake 0.3s linear;
+        }
+    }
+
+    & .right {
+        grid-row: 1;
+        grid-column: 3;
+
+        display: grid;
+        place-items: center start;
+        padding: 0 30% 0 30px;
+        text-align: start;
+    }
+
+    & .left {
+        grid-row: 1;
+        grid-column: 1;
+
+        display: grid;
+        place-items: center end;
+        padding: 0 30px 0 30%;
+        text-align: end;
+    }
 }
 
 @media screen and (max-width: 700px) {
-	.container {
-		font-size: 18px;
-		padding-top: 5%;
-	}
+    .container {
+        font-size: 18px;
+        padding-top: 5%;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(-5deg);
+    }
+    70% {
+        transform: rotate(5deg);
+    }
+    90% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }

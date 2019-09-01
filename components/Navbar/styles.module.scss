@@ -2,119 +2,144 @@
 @import '../../theme/styles/mixins.scss';
 
 .container {
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: 0.7fr 1.5fr 1fr 0fr;
-	grid-column-gap: 1rem;
-	place-items: center center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.7fr 1.5fr 1fr 0fr;
+    grid-column-gap: 1rem;
+    place-items: center center;
 
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
 
-	padding: 1rem 4rem;
+    padding: 1rem 4rem;
 
-	width: 100vw;
-	height: 5.5rem;
+    width: 100vw;
+    height: 5.5rem;
 
-	background: linear-gradient(#0d013c 60%, transparent);
+    background: linear-gradient(#0d013c 60%, transparent);
 
-	& .logo {
-		place-self: center center;
+    & .logo {
+        place-self: center center;
 
-		height: 100%;
-	}
-	@include aTemplate;
+        height: 100%;
+    }
+    @include aTemplate;
 
-	& .anchorContainer {
-		place-self: center start;
+    & .anchorContainer {
+        place-self: center start;
 
-		display: grid;
-		grid-template-rows: 1fr;
-		grid-template-columns: repeat(3, 1fr);
-		place-items: center center;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center center;
 
-		& .anchor {
-			text-align: center;
-			cursor: pointer;
-		}
-		& .anchor:before {
-			border: 1px solid white;
-			border-left: 0;
-			border-right: 0;
-		}
+        & .anchor {
+            text-align: center;
+            cursor: pointer;
 
-		& .anchor:hover:before {
-			bottom: 0;
-			left: 0;
-			width: 100%;
-		}
-	}
+            &:before {
+                border: 1px solid white;
+                border-left: 0;
+                border-right: 0;
+            }
 
-	& .signup {
-		cursor: pointer;
-		text-align: end;
-		place-self: center end;
-		width: max-content;
-		padding: 10px 20px;
-	}
-	& .signup:before {
-		border: 1px solid white;
-		border-left: 0;
-		border-right: 0;
-	}
+            &:hover {
+                &:before {
+                    bottom: 0;
+                    left: 15%;
+                    width: 70%;
 
-	& .signup:hover:before {
-		bottom: 0;
-		left: 0;
-		width: 100%;
-	}
+                    animation: animateBefore 0.15s linear;
+                }
+            }
+        }
+    }
 
-	& .download {
-		cursor: pointer;
+    & .signup {
+        cursor: pointer;
+        text-align: end;
+        place-self: center end;
+        width: max-content;
+        padding: 10px 20px;
 
-		place-self: center start;
+        &:before {
+            border: 1px solid white;
+            border-left: 0;
+            border-right: 0;
+        }
 
-		padding: 0.8rem 1.5rem;
-		text-align: center;
-		background: $buttonOrange;
-	}
-	& .download:hover {
-		background-color: $buttonViolet;
-	}
+        &:hover {
+            &:before {
+                bottom: 0;
+                left: 15%;
+                width: 70%;
+
+                animation: animateBefore 0.15s linear;
+            }
+        }
+    }
+
+    & .download {
+        cursor: pointer;
+
+        place-self: center start;
+
+        padding: 0.8rem 1.5rem;
+        text-align: center;
+        background: $buttonOrange;
+
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $buttonViolet;
+        }
+    }
 }
 
 @media screen and (max-width: 1030px) {
-	.container {
-		grid-template-columns: 1.75fr 3fr 1fr;
-		& .anchorContainer {
-			display: none;
-		}
-	}
+    .container {
+        grid-template-columns: 1.75fr 3fr 1fr;
+        & .anchorContainer {
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width: 770px) {
-	.container {
-		grid-template-columns: 2fr 3fr 1fr;
-	}
+    .container {
+        grid-template-columns: 2fr 3fr 1fr;
+    }
 }
 
 @media screen and (max-width: 500px) {
-	.container {
-		grid-template-columns: 1fr 1fr 0.5fr;
-		padding: 1rem 1rem;
-		font-size: 13px;
-		& .download {
-			padding: 0.8rem;
-		}
-		& .logo {
-			height: 2.5rem;
-		}
-	}
+    .container {
+        grid-template-columns: 1fr 1fr 0.5fr;
+        padding: 1rem 1rem;
+        font-size: 13px;
+        & .download {
+            padding: 0.8rem;
+        }
+        & .logo {
+            height: 2.5rem;
+        }
+    }
 }
 @media screen and (max-width: 360px) {
-	.container {
-		font-size: 12px;
-	}
+    .container {
+        font-size: 12px;
+    }
+}
+
+@keyframes animateBefore {
+    0% {
+        left: 50%;
+        width: 0;
+    }
+
+    100% {
+        left: 15%;
+        width: 70%;
+    }
 }
