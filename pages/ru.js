@@ -35,16 +35,16 @@ class Home extends React.Component {
         const collection = await db.collection('multilang').get();
         collection.forEach((doc) => {
             const {
-                landingBeta: { ua },
+                landingBeta: { ru },
             } = doc.data();
 
             this.setState({
-                content: ua,
+                content: ru,
                 loaded: true,
             });
         });
 
-        //? uncomment (and comment-out after compiling) when content.json was updated
+        //? uncomment when content.json was updated
         //? to update data at firestore
         // db.collection('multilang')
         //     .doc('landingPage')

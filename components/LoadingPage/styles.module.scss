@@ -1,0 +1,16 @@
+@import '../../theme/styles/palette.scss';
+
+.container {
+    display: grid;
+    gap: 5rem;
+    place-items: center center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & img {
+        width: 10rem;
+    }
+}

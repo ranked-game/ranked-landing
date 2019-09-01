@@ -1,5 +1,7 @@
-import React from 'react';
 //Core
+import React from 'react';
+
+// Components
 import Head from '../components/head';
 import Navbar from '../components/Navbar';
 import StartupPage from '../components/StartupPage';
@@ -8,13 +10,15 @@ import FeaturesContainer from '../components/FeaturesContainer';
 import BenefitsContainer from '../components/BenefitsContainer';
 import JoinContainer from '../components/JoinContainer';
 import Footer from '../components/Footer';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import LoadingPage from '../components/LoadingPage';
 
 //Style
 import Styles from '../theme/styles/index.scss';
 
 //Instruments
 import Firebase from '../utils/firebase';
+import jsonData from '../utils/content';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 class Home extends React.Component {
     state = {
@@ -39,6 +43,12 @@ class Home extends React.Component {
                 loaded: true,
             });
         });
+
+        //? uncomment (and comment-out after compiling) when content.json was updated
+        //? to update data at firestore
+        // db.collection('multilang')
+        //     .doc('landingPage')
+        //     .set(jsonData.multilang.landingPage);
     };
 
     scrollToTop = () => {
@@ -87,7 +97,7 @@ class Home extends React.Component {
                         <Footer content={navbar} />
                     </>
                 ) : (
-                    <div>loading.....</div>
+                    <LoadingPage />
                 )}
             </div>
         );
