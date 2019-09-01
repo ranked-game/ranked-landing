@@ -13,16 +13,45 @@ import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } f
 import Styles from '../theme/styles/index.scss';
 
 class Home extends React.Component {
+    state = {
+        scrollToTop: false,
+    };
+
+    componentDidMount = () => {
+        window.addEventListener('scroll', this._onScroll);
+    };
+
     scrollToTop = () => {
         scroll.scrollToTop();
+
+        setTimeout(() => {
+            this.setState({
+                scrollToTop: false,
+            });
+        }, 3000);
     };
+
+    _onScroll = () => {
+        const { scrollToTop } = this.state;
+
+        if (!scrollToTop && window.scrollY > 400) {
+            return this.setState({
+                scrollToTop: true,
+            });
+        }
+    };
+
     render() {
+        const { scrollToTop } = this.state;
+
         return (
             <div className={Styles.container}>
                 <Head title="Home" />
-                <a className={Styles.toTop} onClick={this.scrollToTop} title="top">
-                    ⮝
-                </a>
+                {scrollToTop && (
+                    <a className={Styles.toTop} onClick={this.scrollToTop} title="top">
+                        ⮝
+                    </a>
+                )}
                 <Navbar />
                 <StartupPage />
                 <SupportedGamesContainer />
