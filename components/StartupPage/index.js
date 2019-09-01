@@ -18,46 +18,45 @@ class StartupPage extends Component {
         secondsToStart: null,
     };
 
-    componentDidMount = () => {
+    componentDidMount = async () => {
         const db = Firebase.firestore();
 
-        db.collection('closedBetaStartDate')
-            .get()
-            .then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    const { date } = doc.data();
+        const collection = await db.collection('closedBetaStartDate').get();
 
-                    const goalTime = moment(date).utc();
-                    const now = moment().utc();
+        collection.forEach((doc) => {
+            const { date } = doc.data();
 
-                    const diff = goalTime.diff(now, 'seconds');
+            const goalTime = moment(date).utc();
+            const now = moment().utc();
 
-                    this.setState({
-                        secondsToStart: diff,
-                    });
-                });
+            const diff = goalTime.diff(now, 'seconds');
+
+            this.setState({
+                secondsToStart: diff,
             });
+        });
     };
     render() {
         const { secondsToStart } = this.state;
+        const {
+            content: { title, subtitle, timerTitle, timerValues },
+            button,
+        } = this.props;
 
         return (
             <div className={Styles.container}>
                 <div className={Styles.table}>
                     <div className={Styles.infoBlock}>
-                        <div className={Styles.bigText}>lead the competition and win prizes</div>
-                        <div className={Styles.p1}>
-                            Our application is in beta testing, become one of the first players and
-                            get prizes.
-                        </div>
-                        <div className={Styles.p2}>Time to open beta:</div>
+                        <div className={Styles.bigText}>{title}</div>
+                        <div className={Styles.p1}>{subtitle}</div>
+                        <div className={Styles.p2}>{timerTitle}</div>
                         {secondsToStart ? (
-                            <Timer seconds={secondsToStart} />
+                            <Timer seconds={secondsToStart} values={timerValues} />
                         ) : (
                             <Spinner size="5rem" loader />
                         )}
                         <div className={Styles.btns}>
-                            <button className={Styles.fireBtnOrange}>Download</button>
+                            <button className={Styles.fireBtnOrange}>{button}</button>
                         </div>
                     </div>
 
