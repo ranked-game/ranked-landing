@@ -9,7 +9,6 @@ import moment from 'moment';
 import Firebase from '../../utils/firebase';
 import Timer from '../Timer';
 import Spinner from '../Spinner';
-
 const Dashboard = '/static/assets/images/dashboard.png';
 const wave = '/static/assets/images/bottom2.png';
 
@@ -41,7 +40,9 @@ class StartupPage extends Component {
         const {
             content: { title, subtitle, timerTitle, timerValues },
             button,
+            signin,
         } = this.props;
+        const windowsUser = window.navigator.platform === 'Win32';
 
         return (
             <div className={Styles.container}>
@@ -56,7 +57,9 @@ class StartupPage extends Component {
                             <Spinner size="5rem" loader />
                         )}
                         <div className={Styles.btns}>
-                            <button className={Styles.fireBtnOrange}>{button}</button>
+                            <button className={Styles.fireBtnOrange}>
+                                {windowsUser ? button : signin}
+                            </button>
                         </div>
                     </div>
 

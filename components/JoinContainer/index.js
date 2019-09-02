@@ -1,18 +1,22 @@
 // Styles
 import Styles from './styles.module.scss';
+
 // Instruments
 import Fade from 'react-reveal/Fade';
 
-const JoinContainer = ({ content: { title, subtitle } }) => (
-    <div className={Styles.container}>
-        <Fade bottom>
-            <div className={Styles.bigText}>{title}</div>
-            <div className={Styles.paragraph}>{subtitle}</div>
-            <div className={Styles.buttons}>
-                {/* <button className={Styles.buttonViolet}>Try beta</button> */}
-                <button className={Styles.buttonOrange}>Download</button>
-            </div>
-        </Fade>
-    </div>
-);
+const JoinContainer = ({ content: { title, subtitle }, button, signin }) => {
+    const windowsUser = window.navigator.platform === 'Win32';
+
+    return (
+        <div className={Styles.container}>
+            <Fade bottom>
+                <div className={Styles.bigText}>{title}</div>
+                <div className={Styles.paragraph}>{subtitle}</div>
+                <div className={Styles.buttons}>
+                    <button className={Styles.buttonOrange}>{windowsUser ? button : signin}</button>
+                </div>
+            </Fade>
+        </div>
+    );
+};
 export default JoinContainer;

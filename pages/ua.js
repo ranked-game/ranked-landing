@@ -89,11 +89,19 @@ class Home extends React.Component {
                             </a>
                         )}
                         <Navbar content={navbar} />
-                        <StartupPage content={startupPage} button={navbar.download} />
+                        <StartupPage
+                            content={startupPage}
+                            button={navbar.download}
+                            signin={navbar.signin}
+                        />
                         <SupportedGamesContainer title={navbar.anchors[0]} />
                         <FeaturesContainer content={features} title={navbar.anchors[1]} />
                         <BenefitsContainer content={benefits} title={navbar.anchors[2]} />
-                        <JoinContainer content={join} />
+                        <JoinContainer
+                            content={join}
+                            button={navbar.download}
+                            signin={navbar.signin}
+                        />
                         <Footer content={navbar} />
                     </>
                 ) : (

@@ -100,7 +100,7 @@
 
 @media screen and (max-width: 1030px) {
     .container {
-        grid-template-columns: 1.75fr 3fr 1fr;
+        grid-template-columns: 1.75fr 3fr 2fr;
         & .anchorContainer {
             display: none;
         }
@@ -109,13 +109,13 @@
 
 @media screen and (max-width: 770px) {
     .container {
-        grid-template-columns: 2fr 3fr 1fr;
+        grid-template-columns: 2fr 3fr 3fr;
     }
 }
 
 @media screen and (max-width: 500px) {
     .container {
-        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-columns: 1fr 1fr 2fr;
         padding: 1rem 1rem;
         font-size: 13px;
         & .download {
