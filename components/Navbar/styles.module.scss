@@ -4,7 +4,7 @@
 .container {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 0.7fr 1.5fr 1fr 0fr;
+    grid-template-columns: 0.7fr 1.5fr 1fr 0.7fr;
     grid-column-gap: 1rem;
     place-items: center center;
 
@@ -53,30 +53,6 @@
 
                     animation: animateBefore 0.15s linear;
                 }
-            }
-        }
-    }
-
-    & .signup {
-        cursor: pointer;
-        text-align: end;
-        place-self: center end;
-        width: max-content;
-        padding: 10px 20px;
-
-        &:before {
-            border: 1px solid white;
-            border-left: 0;
-            border-right: 0;
-        }
-
-        &:hover {
-            &:before {
-                bottom: 0;
-                left: 15%;
-                width: 70%;
-
-                animation: animateBefore 0.15s linear;
             }
         }
     }
