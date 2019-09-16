@@ -4,7 +4,7 @@ node_js:
 install:
   - pip install --user awscli
 script:
-  - npm run install
+  - npm i
   - npm run build
   - npm run export
 deploy:
