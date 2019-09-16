@@ -2,34 +2,34 @@
 @import '../../theme/styles/mixins.scss';
 
 .container {
-	padding: 3% 0;
+    padding: 3% 0;
 
-	& .imgFeature {
-		padding: 3% 0;
-		width: 79%;
-		height: 170px;
-		align-content: center;
-	}
-	& .textFeature {
-		font-size: 90%;
-		text-align: center;
-		line-height: 140%;
-		padding-top: 5%;
-	}
+    & .imgFeature {
+        padding: 3% 0;
+        width: 79%;
+        height: 170px;
+        align-content: center;
+    }
+    & .textFeature {
+        font-size: 1.25rem;
+        text-align: center;
+        line-height: 140%;
+        padding-top: 5%;
+    }
 }
 
 @media screen and (max-width: 1436px) {
-	.container {
-		& .textFeature {
-			padding: 2% 4%;
-		}
-	}
+    .container {
+        & .textFeature {
+            padding: 2% 4%;
+        }
+    }
 }
 
 @media screen and (max-width: 555px) {
-	.container {
-		& .imgFeature {
-			height: 150px;
-		}
-	}
+    .container {
+        & .imgFeature {
+            height: 150px;
+        }
+    }
 }

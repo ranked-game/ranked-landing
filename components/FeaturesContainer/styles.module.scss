@@ -2,65 +2,67 @@
 @import '../../theme/styles/mixins.scss';
 
 .container {
-	display: grid;
-	background-image: url(/static/assets/images/bottom2.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	// padding-bottom: 100px;
+    display: grid;
+    background-image: url(/static/assets/images/bottom2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // padding-bottom: 100px;
 
-	& .featureTable {
-		padding: 5% 10% 10% 10%;
-		grid-template-columns: auto auto auto auto;
-		text-align: center;
-		display: grid;
-		grid-gap: 5%;
-	}
+    & .featureTable {
+        padding: 5% 10% 10% 10%;
+        grid-template-columns: auto auto auto auto;
+        text-align: center;
+        display: grid;
+        grid-gap: 5%;
+    }
 
-	& .bigText {
-		text-align: center;
-		@include bigText;
-		font-size: 30px;
-		padding-right: 5%;
-	}
+    & .bigText {
+        text-align: center;
+        @include bigText;
+        font-size: 30px;
+        padding-right: 5%;
+    }
 }
 
 @media screen and (max-width: 1430px) {
-	.container {
-		// padding-bottom: 150px;
-		& .featureTable {
-			padding: 3% 32% 10% 28%;
-			grid-template-columns: auto auto;
-		}
-	}
+    .container {
+        // padding-bottom: 150px;
+        & .featureTable {
+            margin: 0 12%;
+
+            padding: 3% 32% 10% 0;
+            grid-template-columns: 50% 50%;
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {
-	.container {
-		& .featureTable {
-			grid-template-columns: auto;
-			grid-gap: 0;
-		}
-		& .bigText {
-			// padding-right: 0;
-		}
-	}
+    .container {
+        & .featureTable {
+            grid-template-columns: auto;
+            grid-gap: 0;
+        }
+        & .bigText {
+            // padding-right: 0;
+        }
+    }
 }
 
 @media screen and (max-width: 450px) {
-	.container {
-		background: none;
-		& .featureTable {
-			padding: 8% 3%;
-		}
-		& .bigText {
-			font-size: 23px;
-		}
-	}
+    .container {
+        background: none;
+        & .featureTable {
+            padding: 8% 3%;
+        }
+        & .bigText {
+            font-size: 23px;
+        }
+    }
 }
 @media screen and (max-width: 400px) {
-	.container {
-		& .bigText {
-			font-size: 19px;
-		}
-	}
+    .container {
+        & .bigText {
+            font-size: 19px;
+        }
+    }
 }
