@@ -17,8 +17,8 @@
                     },
 
                     "features": [
-                        "Підіймайся сходинками турнірної таблиці і отримуй призи за віхід в топ!",
-                        "Якщо хочеш спробувати грати в команді - ми знайдеомо найкращих для тебе!",
+                        "Підіймайся сходинками турнірної таблиці і отримуй призи за вихід в топ!",
+                        "Якщо хочеш спробувати грати в команді - ми знайдемо найкращих для тебе!",
                         "Коли вирішите, що готові помірятися силами з іншими - візьміть участь у Командних Турнірах!",
                         "Спілкуйся, тренуйся, змагайся і знайди свій шлях на професійну сцену з Ranked!"
                     ],
@@ -33,6 +33,40 @@
                     "join": {
                         "title": "Готовий приєднатися до команди бета-тестерів?",
                         "subtitle": "Приєднуйся до команди тестерів зараз, допоможи нам зробити щось дуже круте і отримай за це приємні бонуси"
+                    }
+                },
+
+                "en": {
+                    "navbar": {
+                        "anchors": ["Supported games", "About us", "For testers"],
+                        "signin": "Apply for beta-access",
+                        "download": "Download"
+                    },
+
+                    "startupPage": {
+                        "title": "Participate in tournaments and fight your way to the pro-scene",
+                        "subtitle": "Ranked.game announces closed beta starting soon!",
+                        "timerTitle": "Closed beta starts in:",
+                        "timerValues": ["Days", "Hours", "Mins", "Secs"]
+                    },
+
+                    "features": [
+                        "Climb up tournament's ladder and get prizes for reaching TOP places!",
+                        "If you want to try yourself as a part of a team - we'll find best for you!",
+                        "When you fell you're ready - compete with other teams in Team Tournaments!",
+                        "communicate, train, compete and find your way to the pro-scene!"
+                    ],
+
+                    "benefits": [
+                        "Early access",
+                        "All active beta-tester are getting prizes after public release",
+                        "Additional packs for most passionate and active testers",
+                        "A chance to become a part of the team to conquer the world (well, at least a part of it)"
+                    ],
+
+                    "join": {
+                        "title": "Ready to join beta-testing team now?",
+                        "subtitle": "Become a beta-tester right now, help us make something magnificent and get some bonuses in addition ;)"
                     }
                 },
 

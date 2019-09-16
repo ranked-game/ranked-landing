@@ -30,16 +30,21 @@ class Home extends React.Component {
     componentDidMount = async () => {
         window.addEventListener('scroll', this._onScroll);
 
+        const userLang = navigator.language.split('-')[0];
+        if (userLang === ('uk' || 'ru')) {
+            return (window.location = `/${userLang}`);
+        }
+
         const db = Firebase.firestore();
 
         const collection = await db.collection('multilang').get();
         collection.forEach((doc) => {
             const {
-                landingBeta: { ua },
+                landingBeta: { en },
             } = doc.data();
 
             this.setState({
-                content: ua,
+                content: en,
                 loaded: true,
             });
         });
