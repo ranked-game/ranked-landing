@@ -18,9 +18,10 @@
     & .paragraph {
         font-family: sans-serif;
         text-align: center;
-        font-size: 110%;
-        padding: 5% 34% 3% 34%;
+        font-size: 1.25rem;
+        padding: 5% 44% 3% 34%;
         line-height: 139.19%;
+        width: 110%;
     }
 
     & .buttons {
@@ -36,7 +37,8 @@
             @include boxShadow($buttonOrange);
 
             height: 100%;
-            width: 30%;
+            width: 90%;
+            max-width: 20rem;
 
             transition: all 0.2s;
 
