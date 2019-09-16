@@ -5,7 +5,7 @@
         "start": "next start",
         "build": "next build",
         "export": "next export",
-        "deploy": "yarn build && yarn export"
+        "deploy": "npm run build && npm run export"
     },
     "dependencies": {
         "@zeit/next-sass": "^1.0.1",
