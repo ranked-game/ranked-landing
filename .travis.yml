@@ -4,9 +4,9 @@ node_js:
 install:
   - pip install --user awscli
 script:
-  - npm install
-  - npm build
-  - npm export
+  - npm i
+  - npm run build
+  - npm run export
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
