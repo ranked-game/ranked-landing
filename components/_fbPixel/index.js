@@ -2,6 +2,7 @@ import React from 'react';
 
 export default () => (
     <>
+        {console.log('Pixel is being set....')}
         <script
             dangerouslySetInnerHTML={{
                 __html: `!function(f,b,e,v,n,t,s)
