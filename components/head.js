@@ -6,8 +6,6 @@ const defaultDescription = '';
 const defaultOGURL = '';
 const defaultOGImage = '';
 
-import Pixel from './_fbPixel';
-
 const Head = (props) => (
     <NextHead>
         <meta charSet="UTF-8" />
