@@ -21,6 +21,7 @@
     background: linear-gradient(#0d013c 60%, transparent);
 
     & .logo {
+        cursor: pointer;
         place-self: center center;
 
         height: 100%;
@@ -60,6 +61,7 @@
 
     & .download {
         cursor: pointer;
+        grid-column: 4;
 
         place-self: center start;
 

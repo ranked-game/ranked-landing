@@ -7,7 +7,7 @@ import Feature from '../Feature';
 const feature = '../../static/assets/svg/';
 
 const FeaturesContainer = ({ content, title }) => (
-    <div className={Styles.container}>
+    <div className={Styles.container} id="About us">
         <Fade bottom>
             <div className={Styles.bigText}>{title}</div>
 

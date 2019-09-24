@@ -8,7 +8,8 @@
     place-items: center;
 
     & .logo {
-        width: 81%;
+        cursor: pointer;
+        width: 50%;
     }
     @include aTemplate;
 

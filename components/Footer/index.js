@@ -1,20 +1,29 @@
 // Styles
 import Styles from './styles.module.scss';
 
+// Instruments
+import { Link } from 'react-scroll';
+
 const Logo = '../../static/assets/svg/logoHorizontal.svg';
 const linkedin = '../../static/assets/svg/logoLinkedIn.svg';
 const facebook = '../../static/assets/svg/logoFb.svg';
 const tw = '../../static/assets/svg/logoTw.svg';
 
-const Footer = ({ content: { anchors } }) => (
+const Footer = ({ content: { anchors }, scrollToTop }) => (
     <>
         <div className={Styles.container}>
-            <img className={Styles.logo} src={Logo} alt={'logo'} />
+            <img className={Styles.logo} src={Logo} alt={'logo'} onClick={scrollToTop} />
             <div className={Styles.anchorContainer}>
                 {anchors.map((item, index) => (
-                    <a className={Styles.anchor} key={index}>
+                    <Link
+                        className={Styles.anchor}
+                        key={index}
+                        to={item}
+                        offset={-14 * 5.5}
+                        smooth={true}
+                    >
                         {item}
-                    </a>
+                    </Link>
                 ))}
             </div>
             <div className={Styles.contacts}>

@@ -107,7 +107,11 @@ class Home extends React.Component {
                                 ⮝
                             </a>
                         )}
-                        <Navbar content={navbar} toggleModal={this._toggleModal} />
+                        <Navbar
+                            content={navbar}
+                            toggleModal={this._toggleModal}
+                            scrollToTop={scroll.scrollToTop}
+                        />
                         <StartupPage
                             content={startupPage}
                             button={navbar.download}
@@ -123,7 +127,7 @@ class Home extends React.Component {
                             signin={navbar.signin}
                             toggleModal={this._toggleModal}
                         />
-                        <Footer content={navbar} />
+                        <Footer content={navbar} scrollToTop={scroll.scrollToTop} />
                         {modalForm && (
                             <Portal>
                                 <SignupForm toggleModal={this._toggleModal} />

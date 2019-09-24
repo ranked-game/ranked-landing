@@ -8,7 +8,7 @@ import Styles from './styles.module.scss';
 const benefit = '../../static/assets/svg/';
 
 const BenefitsContainer = ({ content, title }) => (
-    <div className={Styles.container}>
+    <div className={Styles.container} id="For testers">
         <Fade bottom>
             <div className={Styles.bigText}>{title}</div>
             <Benefit

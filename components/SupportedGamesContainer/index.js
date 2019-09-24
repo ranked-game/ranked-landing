@@ -9,7 +9,7 @@ const dotaLogo = '/static/assets/svg/dotaLogo.svg';
 const lolLogo = '/static/assets/svg/lolLogo.svg';
 
 const SupportedGamesContainer = ({ title }) => (
-    <div className={Styles.container}>
+    <div className={Styles.container} id="Supported games">
         <Fade bottom>
             <div className={Styles.bigText}>{title}</div>
             <div className={Styles.imagesBlock}>
