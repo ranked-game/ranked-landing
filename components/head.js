@@ -6,6 +6,8 @@ const defaultDescription = '';
 const defaultOGURL = '';
 const defaultOGImage = '';
 
+import Pixel from './_fbPixel';
+
 const Head = (props) => (
     <NextHead>
         <meta charSet="UTF-8" />
@@ -25,6 +27,7 @@ const Head = (props) => (
         <meta property="og:image" content={props.ogImage || defaultOGImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <Pixel />
     </NextHead>
 );
 
