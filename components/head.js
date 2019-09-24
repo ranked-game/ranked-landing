@@ -2,9 +2,9 @@ import React from 'react';
 import NextHead from 'next/head';
 import { string } from 'prop-types';
 
-const defaultDescription = '';
-const defaultOGURL = '';
-const defaultOGImage = '';
+const defaultDescription = '🏆 Find your team or play solo 🏆 Join Dota 2 or LoL tournaments and win prizes 🏆 get a chance to start your gaming career!';
+const defaultOGURL = 'https://www.ranked.game';
+const defaultOGImage = '../static/touch-icon.png';
 
 const Head = (props) => (
     <NextHead>
@@ -17,7 +17,7 @@ const Head = (props) => (
         <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
         <link rel="icon" href="/static/favicon.ico" />
         <meta property="og:url" content={props.url || defaultOGURL} />
-        <meta property="og:title" content={props.title || ''} />
+        <meta property="og:title" content={props.title || 'Start your way to the competitive scene with us with Ranked! | RANKED.GAME'} />
         <meta property="og:description" content={props.description || defaultDescription} />
         <meta name="twitter:site" content={props.url || defaultOGURL} />
         <meta name="twitter:card" content="summary_large_image" />

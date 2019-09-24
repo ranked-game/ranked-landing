@@ -2,7 +2,7 @@
 import Styles from './styles.module.scss';
 
 // Instruments
-const Logo = '../../static/assets/svg/logoGroup.svg';
+const Logo = '../../static/assets/svg/logoHorizontal.svg';
 
 const Navbar = ({ toggleModal, content: { anchors, download, signin } }) => {
     const windowsUser = window.navigator.platform === 'Win32';

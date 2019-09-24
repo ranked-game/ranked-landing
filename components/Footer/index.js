@@ -1,7 +1,7 @@
 // Styles
 import Styles from './styles.module.scss';
 
-const Logo = '../../static/assets/svg/logoGroup.svg';
+const Logo = '../../static/assets/svg/logoHorizontal.svg';
 const linkedin = '../../static/assets/svg/logoLinkedIn.svg';
 const facebook = '../../static/assets/svg/logoFb.svg';
 const tw = '../../static/assets/svg/logoTw.svg';
@@ -18,9 +18,13 @@ const Footer = ({ content: { anchors } }) => (
                 ))}
             </div>
             <div className={Styles.contacts}>
-                <img className={Styles.icon} src={tw} alt={'tw'} />
-                <img className={Styles.icon} src={facebook} alt={'facebook'} />
-                <img className={Styles.icon} src={linkedin} alt={'linkedin'} />
+                <a href="https://discord.gg/xtKD9U" target="_blank">
+                    <img className={Styles.icon} src={tw} alt={'tw'} />
+                </a>
+                <a href="https://www.facebook.com/Ranked-Game-106886087345863/" target="_blank">
+                    <img className={Styles.icon} src={facebook} alt={'facebook'} />
+                </a>
+                {/* <img className={Styles.icon} src={linkedin} alt={'linkedin'} /> */}
             </div>
         </div>
         <hr />

@@ -3,7 +3,7 @@ import Styles from './styles.module.scss';
 
 // Instruments
 import Spinner from '../Spinner';
-const logo = '../../static/assets/svg/pseudoLogoBig.svg';
+const logo = '../../static/assets/svg/logoBigVertical.svg';
 
 const LoadingPage = () => (
     <section className={Styles.container}>

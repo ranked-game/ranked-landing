@@ -22,6 +22,7 @@ import Firebase from '../utils/firebase';
 import jsonData from '../utils/content';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import { Portal } from 'react-portal';
+import metaContent from '../utils/title-descr.json';
 
 class Home extends React.Component {
     state = {
@@ -87,12 +88,13 @@ class Home extends React.Component {
             loaded,
             content: { navbar, startupPage, features, benefits, join },
         } = this.state;
+        const { Title, Description } = metaContent;
 
         return (
             <div className={Styles.container}>
                 {loaded ? (
                     <>
-                        <Head title="Home" />
+                        <Head title={Title.UKR} description={Description.UKR} />
                         {scrollToTop && (
                             <a className={Styles.toTop} onClick={this.scrollToTop} title="top">
                                 ⮝
