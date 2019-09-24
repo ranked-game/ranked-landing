@@ -5,7 +5,8 @@ import { string } from 'prop-types';
 const defaultDescription =
     '🏆 Find your team or play solo 🏆 Join Dota 2 or LoL tournaments and win prizes 🏆 get a chance to start your gaming career!';
 const defaultOGURL = 'https://www.ranked.game';
-const defaultOGImage = '../static/touch-icon.png';
+const defaultOGImage =
+    'https://wizardly-morse-37598a.netlify.com/static/assets/svg/logoHorizontal.svg';
 
 const Head = (props) => (
     <NextHead>
