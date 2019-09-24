@@ -57,9 +57,17 @@ class StartupPage extends Component {
                             <Spinner size="5rem" loader />
                         )}
                         <div className={Styles.btns}>
-                            <button className={Styles.fireBtnOrange}>
-                                {windowsUser ? button : signin}
-                            </button>
+                            {windowsUser ? (
+                                <a
+                                    href="https://www.overwolf.com/app/Ranked_Game-Ranked"
+                                    target="_blank"
+                                    className={Styles.fireBtnOrange}
+                                >
+                                    {button}
+                                </a>
+                            ) : (
+                                <button className={Styles.fireBtnOrange}>{signin}</button>
+                            )}
                         </div>
                     </div>
 

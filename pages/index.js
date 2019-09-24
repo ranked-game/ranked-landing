@@ -119,5 +119,5 @@ class Home extends React.Component {
     }
 }
 
-// export default Home;
-export default withFBQ('2688862331146975', Router)(Home);
+export default Home;
+// export default withFBQ('2688862331146975', Router)(Home);

@@ -20,7 +20,17 @@ const Navbar = ({ content: { anchors, download, signin } }) => {
 
             {/* костиль, бо мені лінь в стилі лізти */}
             <div />
-            <a className={Styles.download}>{windowsUser ? download : signin}</a>
+            {windowsUser ? (
+                <a
+                    href="https://www.overwolf.com/app/Ranked_Game-Ranked"
+                    target="_blank"
+                    className={Styles.download}
+                >
+                    {download}
+                </a>
+            ) : (
+                <button className={Styles.download}>{signin}</button>
+            )}
         </div>
     );
 };

@@ -13,7 +13,17 @@ const JoinContainer = ({ content: { title, subtitle }, button, signin }) => {
                 <div className={Styles.bigText}>{title}</div>
                 <div className={Styles.paragraph}>{subtitle}</div>
                 <div className={Styles.buttons}>
-                    <button className={Styles.buttonOrange}>{windowsUser ? button : signin}</button>
+                    {windowsUser ? (
+                        <a
+                            href="https://www.overwolf.com/app/Ranked_Game-Ranked"
+                            target="_blank"
+                            className={Styles.buttonOrange}
+                        >
+                            {button}
+                        </a>
+                    ) : (
+                        <button className={Styles.buttonOrange}>{signin}</button>
+                    )}
                 </div>
             </Fade>
         </div>
