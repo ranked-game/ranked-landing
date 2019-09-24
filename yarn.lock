@@ -3936,6 +3936,13 @@ next-compose-plugins@^2.2.0:
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
   integrity sha512-ChUlpT9tWfJ7YxqGw/WQ2T1gf8EeX93n1XqeQw0lkvGa7seszahvF4eOZUJoq7Hetsbzg4UHVnPoCXfXTyQR3g==
 
+next-fbq@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/next-fbq/-/next-fbq-2.0.0.tgz#6b3c752b293369a70e35028d8d082bcebcf91e60"
+  integrity sha512-ZdxkigGJVJxA6Fw72eKwqMP7dnUebyuVyp/aWZDAa09mmJw/ps2ok1W7VQlaidDJ0hnL6h2yjpPOGhe4i8lYRw==
+  dependencies:
+    react-facebook-pixel "^0.1.1"
+
 next-images@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/next-images/-/next-images-1.1.2.tgz#de08706154953aaaffda67a3bc83d76be145b174"
@@ -4831,6 +4838,11 @@ react-error-overlay@5.1.6:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
+
+react-facebook-pixel@^0.1.1:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/react-facebook-pixel/-/react-facebook-pixel-0.1.3.tgz#4dcd065d0d6423fb07471c7758c2f9c1986e4ce4"
+  integrity sha512-9Zlnmjn2zGPGucuaxjHkNHW3DvDMCLkM9DFx0o0j7u3fzzsD+2bOtG1JA3PP8A11U5WBwoL0BD/RGQmaDvaIDw==
 
 react-is@16.8.6:
   version "16.8.6"
