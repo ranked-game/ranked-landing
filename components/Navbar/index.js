@@ -4,8 +4,9 @@ import Styles from './styles.module.scss';
 // Instruments
 const Logo = '../../static/assets/svg/logoGroup.svg';
 
-const Navbar = ({ content: { anchors, download, signin } }) => {
+const Navbar = ({ toggleModal, content: { anchors, download, signin } }) => {
     const windowsUser = window.navigator.platform === 'Win32';
+    // const windowsUser = false;
 
     return (
         <div className={Styles.container}>
@@ -29,7 +30,9 @@ const Navbar = ({ content: { anchors, download, signin } }) => {
                     {download}
                 </a>
             ) : (
-                <button className={Styles.download}>{signin}</button>
+                <button className={Styles.download} onClick={toggleModal}>
+                    {signin}
+                </button>
             )}
         </div>
     );

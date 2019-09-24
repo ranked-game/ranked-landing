@@ -13,6 +13,7 @@ import BenefitsContainer from '../components/BenefitsContainer';
 import JoinContainer from '../components/JoinContainer';
 import Footer from '../components/Footer';
 import LoadingPage from '../components/LoadingPage';
+import SignupForm from '../components/_modals/SignupForm';
 
 //Style
 import Styles from '../theme/styles/index.scss';
@@ -21,11 +22,13 @@ import Styles from '../theme/styles/index.scss';
 import Firebase from '../utils/firebase';
 import jsonData from '../utils/content';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Portal } from 'react-portal';
 
 class Home extends React.Component {
     state = {
         scrollToTop: false,
         loaded: false,
+        modalForm: false,
         content: {},
     };
 
@@ -78,10 +81,17 @@ class Home extends React.Component {
         }
     };
 
+    _toggleModal = () => {
+        this.setState((prevState) => ({
+            modalForm: !prevState.modalForm,
+        }));
+    };
+
     render() {
         const {
             scrollToTop,
             loaded,
+            modalForm,
             content: { navbar, startupPage, features, benefits, join },
         } = this.state;
 
@@ -95,11 +105,12 @@ class Home extends React.Component {
                                 ⮝
                             </a>
                         )}
-                        <Navbar content={navbar} />
+                        <Navbar content={navbar} toggleModal={this._toggleModal} />
                         <StartupPage
                             content={startupPage}
                             button={navbar.download}
                             signin={navbar.signin}
+                            toggleModal={this._toggleModal}
                         />
                         <SupportedGamesContainer title={navbar.anchors[0]} />
                         <FeaturesContainer content={features} title={navbar.anchors[1]} />
@@ -108,8 +119,14 @@ class Home extends React.Component {
                             content={join}
                             button={navbar.download}
                             signin={navbar.signin}
+                            toggleModal={this._toggleModal}
                         />
                         <Footer content={navbar} />
+                        {modalForm && (
+                            <Portal>
+                                <SignupForm toggleModal={this._toggleModal} />
+                            </Portal>
+                        )}
                     </>
                 ) : (
                     <LoadingPage />

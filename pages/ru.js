@@ -21,11 +21,13 @@ import Styles from '../theme/styles/index.scss';
 import Firebase from '../utils/firebase';
 import jsonData from '../utils/content';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Portal } from 'react-portal';
 
 class Home extends React.Component {
     state = {
         scrollToTop: false,
         loaded: false,
+        modalForm: false,
         content: {},
     };
 
@@ -73,6 +75,12 @@ class Home extends React.Component {
         }
     };
 
+    _toggleModal = () => {
+        this.setState((prevState) => ({
+            modalForm: !prevState.modalForm,
+        }));
+    };
+
     render() {
         const {
             scrollToTop,
@@ -105,6 +113,11 @@ class Home extends React.Component {
                             signin={navbar.signin}
                         />
                         <Footer content={navbar} />
+                        {modalForm && (
+                            <Portal>
+                                <SignupForm toggleModal={this._toggleModal} />
+                            </Portal>
+                        )}
                     </>
                 ) : (
                     <LoadingPage />

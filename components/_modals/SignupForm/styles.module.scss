@@ -1,0 +1,137 @@
+@import '../../../theme/styles/palette.scss';
+@import '../../../theme/styles/mixins.scss';
+
+.bg {
+    cursor: pointer;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    place-items: center center;
+
+    background: #06011be1;
+
+    z-index: 100;
+
+    & .container {
+        display: grid;
+        grid-template-columns: 1;
+        place-items: center center;
+
+        padding: 1rem;
+
+        background: #33208a;
+
+        min-width: 320px;
+        max-width: 600px;
+        max-height: 300px;
+        width: 50%;
+        height: 30%;
+
+        border-radius: 8px;
+
+        &.successContainer {
+            max-width: 400px;
+            max-height: 200px;
+        }
+
+        & .tick {
+            width: 25%;
+            max-width: 7rem;
+        }
+
+        & .cross {
+            width: 25%;
+            max-width: 7rem;
+        }
+
+        & .smaller {
+            font-size: 1.3rem;
+        }
+
+        & p {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        & input {
+            height: 3rem;
+            width: 70%;
+            text-align: center;
+            outline: none;
+            font-size: 1.2rem;
+
+            color: #5541ad;
+
+            border-radius: 4px;
+            border: none;
+        }
+
+        & button {
+            background: $buttonOrange;
+
+            height: 3rem;
+            width: 70%;
+
+            border-radius: 4px;
+            border: none;
+
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: $buttonViolet;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .bg {
+        & .container {
+            & .smaller {
+                font-size: 1.2rem;
+            }
+
+            & p {
+                width: 80%;
+                font-size: 1.2rem;
+            }
+
+            & input {
+                font-size: 1rem;
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .bg {
+        & .container {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bg {
+        & .container {
+            width: 90%;
+
+            & p {
+                width: 80%;
+                font-size: 1.2rem;
+            }
+
+            & input {
+                font-size: 1rem;
+                width: 90%;
+            }
+        }
+    }
+}

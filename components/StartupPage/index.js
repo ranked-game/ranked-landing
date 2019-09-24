@@ -41,8 +41,10 @@ class StartupPage extends Component {
             content: { title, subtitle, timerTitle, timerValues },
             button,
             signin,
+            toggleModal,
         } = this.props;
         const windowsUser = window.navigator.platform === 'Win32';
+        // const windowsUser = false;
 
         return (
             <div className={Styles.container}>
@@ -66,7 +68,9 @@ class StartupPage extends Component {
                                     {button}
                                 </a>
                             ) : (
-                                <button className={Styles.fireBtnOrange}>{signin}</button>
+                                <button className={Styles.fireBtnOrange} onClick={toggleModal}>
+                                    {signin}
+                                </button>
                             )}
                         </div>
                     </div>

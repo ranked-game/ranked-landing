@@ -4,8 +4,9 @@ import Styles from './styles.module.scss';
 // Instruments
 import Fade from 'react-reveal/Fade';
 
-const JoinContainer = ({ content: { title, subtitle }, button, signin }) => {
+const JoinContainer = ({ content: { title, subtitle }, button, signin, toggleModal }) => {
     const windowsUser = window.navigator.platform === 'Win32';
+    // const windowsUser = false;
 
     return (
         <div className={Styles.container}>
@@ -22,7 +23,9 @@ const JoinContainer = ({ content: { title, subtitle }, button, signin }) => {
                             {button}
                         </a>
                     ) : (
-                        <button className={Styles.buttonOrange}>{signin}</button>
+                        <button className={Styles.buttonOrange} onClick={toggleModal}>
+                            {signin}
+                        </button>
                     )}
                 </div>
             </Fade>
