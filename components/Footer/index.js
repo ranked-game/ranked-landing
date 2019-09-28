@@ -27,7 +27,7 @@ const Footer = ({ content: { anchors }, scrollToTop }) => (
                 ))}
             </div>
             <div className={Styles.contacts}>
-                <a href="https://discord.gg/xtKD9U" target="_blank">
+                <a href="https://discord.gg/agFvhEm" target="_blank">
                     <img className={Styles.icon} src={tw} alt={'tw'} />
                 </a>
                 <a href="https://www.facebook.com/Ranked-Game-106886087345863/" target="_blank">

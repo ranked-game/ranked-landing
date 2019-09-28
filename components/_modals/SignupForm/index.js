@@ -74,6 +74,7 @@ export default class SignupForm extends Component {
 
     render() {
         const { loading, name, email, fail, success } = this.state;
+
         return (
             <section className={Styles.bg} id="bg" onClick={this._closeModal}>
                 <div className={`${Styles.container} ${success && Styles.successContainer}`}>

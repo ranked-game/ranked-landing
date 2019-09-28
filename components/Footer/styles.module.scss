@@ -10,6 +10,7 @@
     & .logo {
         cursor: pointer;
         width: 50%;
+        min-width: 150px;
     }
     @include aTemplate;
 
@@ -24,6 +25,7 @@
         & .anchor {
             text-align: center;
             cursor: pointer;
+            font-size: 1.5rem;
 
             &:before {
                 border: 1px solid white;
@@ -34,8 +36,8 @@
             &:hover {
                 &:before {
                     bottom: 0;
-                    left: 15%;
-                    width: 70%;
+                    left: 5%;
+                    width: 90%;
 
                     animation: animateBefore 0.15s linear;
                 }
@@ -45,7 +47,6 @@
 
     & .contacts {
         display: grid;
-        grid-gap: 5%;
         grid-template-columns: auto auto auto;
 
         padding-left: 60%;
@@ -53,6 +54,8 @@
 
         & .icon {
             transition: all 0.2s;
+            max-width: 4rem;
+            min-width: 3rem;
 
             &:hover {
                 transform: scale(1.1);
@@ -101,19 +104,15 @@ hr {
     .textFooter {
         font-size: 10px;
     }
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 5%;
 
-        & .logo {
-            place-self: center;
-            width: 65%;
-            padding-bottom: 16px;
-        }
+    .container {
         & .contacts {
             place-self: center;
-            padding: 10px 20%;
+            padding-left: 2rem;
+
+            & .icon {
+                width: 3rem;
+            }
         }
     }
 }

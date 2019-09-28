@@ -38,7 +38,7 @@
         place-items: center center;
 
         & .anchor {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             text-align: center;
             cursor: pointer;
 
@@ -51,8 +51,8 @@
             &:hover {
                 &:before {
                     bottom: 0;
-                    left: 15%;
-                    width: 70%;
+                    left: 5%;
+                    width: 90%;
 
                     animation: animateBefore 0.15s linear;
                 }
@@ -69,6 +69,7 @@
         padding: 0.8rem 1.5rem;
         text-align: center;
         background: $buttonOrange;
+        font-size: 1.15rem;
 
         transition: background-color 0.3s;
 
@@ -90,6 +91,10 @@
 @media screen and (max-width: 770px) {
     .container {
         grid-template-columns: 2fr 3fr;
+
+        & .download {
+            font-size: 1rem;
+        }
     }
 }
 
