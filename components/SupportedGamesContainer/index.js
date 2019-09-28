@@ -4,9 +4,9 @@ import Styles from './styles.module.scss';
 import Fade from 'react-reveal/Fade';
 
 const dotaMain = '/static/assets/images/dotaBanner.png';
-const lolMain = '/static/assets/images/lolBanner.png';
+const r6sMain = '/static/assets/images/r6sBanner.jpg';
 const dotaLogo = '/static/assets/svg/dotaLogo.svg';
-const lolLogo = '/static/assets/svg/lolLogo.svg';
+const r6sLogo = '/static/assets/images/rs6Logo.png';
 
 const SupportedGamesContainer = ({ title }) => (
     <div className={Styles.container} id="Supported games">
@@ -16,8 +16,8 @@ const SupportedGamesContainer = ({ title }) => (
                 <div className={Styles.imgMain} style={{ backgroundImage: `url(${dotaMain})` }}>
                     <img className={Styles.logo} src={dotaLogo} alt={'dotaLogo'} />
                 </div>
-                <div className={Styles.imgMain} style={{ backgroundImage: `url(${lolMain})` }}>
-                    <img className={Styles.logo} src={lolLogo} alt={'lolLogo'} />
+                <div className={Styles.imgMain} style={{ backgroundImage: `url(${r6sMain})` }}>
+                    <img className={Styles.logoR6s} src={r6sLogo} alt={'r6sLogo'} />
                 </div>
             </div>
         </Fade>

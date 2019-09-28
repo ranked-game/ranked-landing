@@ -25,7 +25,7 @@ export default class SignupForm extends Component {
     };
 
     _send = async () => {
-        const { name, email } = this.state;
+        const { email } = this.state;
         const { toggleModal } = this.props;
 
         try {
@@ -33,8 +33,13 @@ export default class SignupForm extends Component {
                 loading: true,
             });
 
-            // sending data
-            console.log('sending -> ', name, email);
+            const response = await fetch('https://api.ranked.game/api/contact/mvp/subscribe', {
+                method: 'POST',
+                body: JSON.stringify({ email }),
+            });
+
+            if (response.status !== 200) throw new Error();
+
             this.setState(
                 {
                     success: true,

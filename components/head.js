@@ -27,11 +27,7 @@ const Head = (props) => (
             }
         />
         <meta property="og:description" content={props.description || defaultDescription} />
-        {/* <meta property="og:image" content={props.ogImage || defaultOGImage} /> */}
-        <meta
-            property="og:image"
-            content="https://wizardly-morse-37598a.netlify.com/static/assets/svg/logoHorizontal.svg"
-        />
+        <meta property="og:image" content={props.ogImage || defaultOGImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:site" content={props.url || defaultOGURL} />

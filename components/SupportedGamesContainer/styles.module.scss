@@ -1,140 +1,157 @@
 @import '../../theme/styles/mixins.scss';
 .container {
-	display: grid;
-	padding-top: 1rem;
-	padding-bottom: 2rem;
-	& .bigText {
-		@include bigText;
-		text-align: center;
-		font-size: 30px;
-	}
+    display: grid;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    & .bigText {
+        @include bigText;
+        text-align: center;
+        font-size: 30px;
+    }
 
-	& .imagesBlock {
-		display: grid;
-		width: 100%;
-		grid-template-columns: 1fr 1fr;
-		// height: 750px;
+    & .imagesBlock {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        // height: 750px;
 
-		& .imgMain {
-			height: 700px;
-			display: grid;
-			background-repeat: no-repeat;
-			background-size: 180%;
-			background-position-x: 8%;
-			& .logo {
-				place-self: center;
-				width: 50%;
-			}
-		}
-	}
+        & .imgMain {
+            height: 700px;
+            display: grid;
+            background-repeat: no-repeat;
+            background-size: 180%;
+            background-position-x: 8%;
+            & .logoR6s {
+                place-self: center;
+                width: 70%;
+            }
+
+            & .logo {
+                place-self: center;
+                width: 50%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1650px) {
-	.container {
-		padding-top: 9rem;
-		& .imagesBlock {
-			& .imgMain {
-				height: 600px;
-				& .logo {
-					width: 45%;
-				}
-			}
-		}
-	}
+    .container {
+        padding-top: 9rem;
+        & .imagesBlock {
+            & .imgMain {
+                height: 600px;
+                & .logoR6s {
+                    width: 65%;
+                }
+
+                & .logo {
+                    width: 45%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1550px) {
-	.container {
-		padding-top: 11rem;
-		& .imagesBlock {
-			& .imgMain {
-				height: 550px;
+    .container {
+        padding-top: 11rem;
+        & .imagesBlock {
+            & .imgMain {
+                height: 550px;
 
-				& .logo {
-					width: 40%;
-				}
-			}
-		}
-	}
+                & .logoR6s {
+                    width: 60%;
+                }
+
+                & .logo {
+                    width: 40%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1450px) {
-	.container {
-		& .imagesBlock {
-			& .imgMain {
-				height: 460px;
-			}
-		}
-	}
+    .container {
+        & .imagesBlock {
+            & .imgMain {
+                height: 460px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1030px) {
-	.container {
-		& .imagesBlock {
-			display: grid;
-			width: 100%;
-			grid-template-columns: 1fr;
+    .container {
+        & .imagesBlock {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr;
 
-			& .imgMain {
-				background-size: 140%;
-				background-position-x: 0;
-				// height: inherit;
-				& .logo {
-					width: 30%;
-				}
-			}
-		}
-	}
+            & .imgMain {
+                background-size: 140%;
+                background-position-x: 0;
+                // height: inherit;
+                & .logoR6s {
+                    width: 50%;
+                }
+
+                & .logo {
+                    width: 30%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
-	.container {
-		padding-top: 3rem;
-		& .imagesBlock {
-			& .imgMain {
-				height: 335px;
-			}
-		}
-	}
+    .container {
+        padding-top: 3rem;
+        & .imagesBlock {
+            & .imgMain {
+                height: 335px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
-	.container {
-		& .imagesBlock {
-			& .imgMain {
-				height: 315px;
+    .container {
+        & .imagesBlock {
+            & .imgMain {
+                height: 315px;
 
-				background-size: 180%;
-			}
-		}
-	}
+                background-size: 180%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 450px) {
-	.container {
-		& .bigText {
-			font-size: 23px;
-		}
-	}
+    .container {
+        & .bigText {
+            font-size: 23px;
+        }
+    }
 }
 @media screen and (max-width: 400px) {
-	.container {
-		& .bigText {
-			font-size: 19px;
-		}
-		& .imagesBlock {
-			& .imgMain {
-				height: 280px;
-			}
-		}
-	}
+    .container {
+        & .bigText {
+            font-size: 19px;
+        }
+        & .imagesBlock {
+            & .imgMain {
+                height: 280px;
+            }
+        }
+    }
 }
 @media screen and (max-width: 360px) {
-	.container {
-		& .imagesBlock {
-			& .imgMain {
-				height: 250px;
-			}
-		}
-	}
+    .container {
+        & .imagesBlock {
+            & .imgMain {
+                height: 250px;
+            }
+        }
+    }
 }
