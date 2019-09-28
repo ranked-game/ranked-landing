@@ -25,6 +25,7 @@
         place-self: center center;
 
         height: 100%;
+        min-width: 150px;
     }
     @include aTemplate;
 
@@ -88,14 +89,14 @@
 
 @media screen and (max-width: 770px) {
     .container {
-        grid-template-columns: 2fr 3fr 3fr;
+        grid-template-columns: 2fr 3fr;
     }
 }
 
 @media screen and (max-width: 500px) {
     .container {
-        grid-template-columns: 1fr 1fr 2fr;
-        padding: 1rem 1rem;
+        grid-template-columns: 1fr 2fr;
+        padding: 1rem;
         font-size: 13px;
         & .download {
             padding: 0.8rem;

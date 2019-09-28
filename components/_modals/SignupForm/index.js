@@ -33,12 +33,17 @@ export default class SignupForm extends Component {
                 loading: true,
             });
 
+            console.log(email);
+
             const response = await fetch('https://api.ranked.game/api/contact/mvp/subscribe', {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
                 body: JSON.stringify({ email }),
             });
 
-            if (response.status !== 200) throw new Error();
+            if (!response.status.toString().startsWith('20')) throw new Error();
 
             this.setState(
                 {
