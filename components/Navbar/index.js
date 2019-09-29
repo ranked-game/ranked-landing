@@ -12,6 +12,7 @@ const Navbar = ({
     content: { anchors, download, signin },
 }) => {
     const windowsUser = window.navigator.platform === 'Win32';
+    // const windowsUser = false;
 
     return (
         <div className={Styles.container}>

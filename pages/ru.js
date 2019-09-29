@@ -13,6 +13,7 @@ import BenefitsContainer from '../components/BenefitsContainer';
 import JoinContainer from '../components/JoinContainer';
 import Footer from '../components/Footer';
 import LoadingPage from '../components/LoadingPage';
+import SignupForm from '../components/_modals/SignupForm';
 
 //Style
 import Styles from '../theme/styles/index.scss';

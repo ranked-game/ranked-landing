@@ -13,6 +13,7 @@ import BenefitsContainer from '../components/BenefitsContainer';
 import JoinContainer from '../components/JoinContainer';
 import Footer from '../components/Footer';
 import LoadingPage from '../components/LoadingPage';
+import SignupForm from '../components/_modals/SignupForm';
 
 //Style
 import Styles from '../theme/styles/index.scss';
@@ -101,11 +102,12 @@ class Home extends React.Component {
                                 ⮝
                             </a>
                         )}
-                        <Navbar content={navbar} />
+                        <Navbar content={navbar} toggleModal={this._toggleModal} />
                         <StartupPage
                             content={startupPage}
                             button={navbar.download}
                             signin={navbar.signin}
+                            toggleModal={this._toggleModal}
                         />
                         <SupportedGamesContainer title={navbar.anchors[0]} />
                         <FeaturesContainer content={features} title={navbar.anchors[1]} />
