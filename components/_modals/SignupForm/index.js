@@ -52,13 +52,20 @@ export default class SignupForm extends Component {
                 () => {
                     setTimeout(() => {
                         toggleModal();
-                    }, 3000);
+                    }, 1000);
                 },
             );
         } catch (err) {
-            this.setState({
-                fail: true,
-            });
+            this.setState(
+                {
+                    fail: true,
+                },
+                () => {
+                    setTimeout(() => {
+                        toggleModal();
+                    }, 2000);
+                },
+            );
         } finally {
             this.setState({
                 loading: false,
@@ -77,18 +84,16 @@ export default class SignupForm extends Component {
 
         return (
             <section className={Styles.bg} id="bg" onClick={this._closeModal}>
-                <div className={`${Styles.container} ${success && Styles.successContainer}`}>
+                <div
+                    className={`${Styles.container} ${success ||
+                        (fail && Styles.successContainer)}`}
+                >
                     {loading ? (
                         <Spinner size="5rem" loader />
                     ) : fail ? (
                         <>
-                            <p className={Styles.smaller}>
-                                Whoops! Something went wrong and
-                                your&nbsp;message&nbsp;was&nbsp;not&nbsp;sent&nbsp;:(
-                            </p>
-                            <p className={Styles.smaller}>
-                                Try sending a message to admin@ranked.game
-                            </p>
+                            <p>Something went wrong</p>
+                            <p>Try sending a message to admin@ranked.game</p>
                             <img src={cross} className={Styles.cross} />
                         </>
                     ) : success ? (
