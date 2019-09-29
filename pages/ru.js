@@ -101,11 +101,12 @@ class Home extends React.Component {
                                 ⮝
                             </a>
                         )}
-                        <Navbar content={navbar} />
+                        <Navbar content={navbar} toggleModal={this._toggleModal} />
                         <StartupPage
                             content={startupPage}
                             button={navbar.download}
                             signin={navbar.signin}
+                            toggleModal={this._toggleModal}
                         />
                         <SupportedGamesContainer title={navbar.anchors[0]} />
                         <FeaturesContainer content={features} title={navbar.anchors[1]} />
