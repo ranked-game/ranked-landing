@@ -86,6 +86,7 @@ class Home extends React.Component {
         const {
             scrollToTop,
             loaded,
+            modalForm,
             content: { navbar, startupPage, features, benefits, join },
         } = this.state;
         const { Title, Description } = metaContent;
