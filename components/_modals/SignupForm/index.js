@@ -52,7 +52,7 @@ export default class SignupForm extends Component {
                 () => {
                     setTimeout(() => {
                         toggleModal();
-                    }, 1000);
+                    }, 2000);
                 },
             );
         } catch (err) {

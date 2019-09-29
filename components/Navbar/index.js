@@ -11,8 +11,7 @@ const Navbar = ({
     scrollToTop,
     content: { anchors, download, signin },
 }) => {
-    // const windowsUser = window.navigator.platform === 'Win32';
-    const windowsUser = false;
+    const windowsUser = window.navigator.platform === 'Win32';
 
     return (
         <div className={Styles.container}>
