@@ -36,10 +36,10 @@ class Home extends React.Component {
     componentDidMount = async () => {
         window.addEventListener('scroll', this._onScroll);
 
-        const userLang = navigator.language.split('-')[0];
-        if (userLang === ('uk' || 'ru')) {
-            return (window.location = `/${userLang}`);
-        }
+        // const userLang = navigator.language.split('-')[0];
+        // if (userLang === ('uk' || 'ru')) {
+        //     return (window.location = `/${userLang}`);
+        // }
 
         const db = Firebase.firestore();
 
