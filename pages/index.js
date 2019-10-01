@@ -26,6 +26,8 @@ import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } f
 import { Portal } from 'react-portal';
 import metaContent from '../utils/title-descr.json';
 
+@withGA('UA-146482685-1', Router)
+@withFBQ('2688862331146975', Router)
 class Home extends React.Component {
     state = {
         scrollToTop: false,
@@ -144,4 +146,4 @@ class Home extends React.Component {
 }
 
 // export default Home;
-export default withGA('UA-146482685-1', withFBQ('2688862331146975', Router))(Home);
+export default Home;
