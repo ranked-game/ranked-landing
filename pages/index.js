@@ -2,6 +2,7 @@
 import React from 'react';
 import Router from 'next/router';
 import withFBQ from 'next-fbq';
+import withGA from 'next-ga';
 
 // Components
 import Head from '../components/head';
@@ -143,4 +144,4 @@ class Home extends React.Component {
 }
 
 // export default Home;
-export default withFBQ('2688862331146975', Router)(Home);
+export default withGA('UA-146482685-1', withFBQ('2688862331146975', Router))(Home);
