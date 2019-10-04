@@ -43,6 +43,7 @@ class Home extends React.Component {
         // if (userLang === ('uk' || 'ru')) {
         //     return (window.location = `/${userLang}`);
         // }
+        alert(userLang);
 
         const db = Firebase.firestore();
 
