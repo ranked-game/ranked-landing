@@ -51,8 +51,7 @@ class Home extends React.Component {
             const { landingBeta } = doc.data();
 
             this.setState({
-                // content: landingBeta[userLang],
-                content: landingBeta.uk,
+                content: landingBeta[userLang],
                 loaded: true,
             });
         });
