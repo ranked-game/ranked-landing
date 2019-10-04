@@ -39,7 +39,7 @@ class Home extends React.Component {
     componentDidMount = async () => {
         window.addEventListener('scroll', this._onScroll);
 
-        // const userLang = navigator.language.split('-')[0];
+        const userLang = navigator.language.split('-')[0];
         // if (userLang === ('uk' || 'ru')) {
         //     return (window.location = `/${userLang}`);
         // }
@@ -48,12 +48,10 @@ class Home extends React.Component {
 
         const collection = await db.collection('multilang').get();
         collection.forEach((doc) => {
-            const {
-                landingBeta: { en },
-            } = doc.data();
+            const { landingBeta } = doc.data();
 
             this.setState({
-                content: en,
+                content: landingBeta[userLang],
                 loaded: true,
             });
         });
